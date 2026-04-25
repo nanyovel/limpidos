@@ -18,7 +18,7 @@ const BENEFITS = [
     title: "Reducción de costos operativos",
     description:
       "Eliminamos los costos ocultos del personal interno: cargas sociales, vacaciones, bajas médicas, capacitaciones y equipos. Paga una tarifa fija y predecible.",
-    highlight: "Ahorro promedio del 15–20%",
+    highlight: "Ahorro economico promedio del 15–20%",
   },
   {
     icon: (
