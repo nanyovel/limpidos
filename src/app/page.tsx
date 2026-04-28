@@ -8,9 +8,33 @@ import { SERVICES, SOLUTIONS, STATS } from "@/lib/data";
 
 export const metadata: Metadata = {
   title:
-    "Limpidos — Outsourcing de Limpieza Empresarial | Servicios B2B Profesionales",
+    "Limpidos — Outsourcing de Limpieza Empresarial | Limpieza de Oficinas e industrias",
   description:
-    "Reducimos sus costos operativos con outsourcing de limpieza profesional para empresas. Oficinas, industrias, clínicas y comercios. Más de 200 empresas confían en Limpidos.",
+    "Reducimos sus costos operativos con outsourcing de limpieza profesional para empresas. Oficinas, industrias y comercios. Personal capacitado, tecnología de gestión y garantía de satisfacción. Deje la limpieza en manos expertas y enfoque su tiempo en lo que realmente importa.",
+
+  authors: [{ name: "Limpidos SRL" }],
+
+  openGraph: {
+    title:
+      "Limpidos — Outsourcing de Limpieza Empresarial | Limpieza de Oficinas e industrias",
+    description:
+      "Nos encargamos de la limpieza de su empresa para que usted pueda enfocarse en lo que realmente importa. Personal capacitado, tecnología de gestión y garantía de satisfacción. Reduzca costos operativos y mejore la productividad con nuestro servicio profesional de limpieza outsourcing.",
+    url: "https://limpidos.com",
+    siteName: "Limpidos SRL",
+    locale: "es_DO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Limpidos — Outsourcing de Limpieza Empresarial",
+    description:
+      "Limpieza empresarial en Republica Dominicana | Limpieza de oficina | Conserjeria",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: { canonical: "https://limpidos.com" },
 };
 

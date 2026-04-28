@@ -100,12 +100,116 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CleaningService",
+        "@id": "https://limpidos.com/#business",
+        name: COMPANY.name,
+        description: COMPANY.description,
+        url: "https://limpidos.com",
+        telephone: COMPANY.phone,
+        email: COMPANY.email,
+        priceRange: "$$",
+        image: "https://limpidos.com/og-image.jpg",
+
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Av. Sarasota esquina Av. Enrique Jimenez Moya",
+          addressLocality: "Santo Domingo",
+          addressRegion: "Distrito Nacional",
+          addressCountry: "DO",
+        },
+
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 18.4587025,
+          longitude: -69.9327212,
+        },
+
+        areaServed: "Dominican Republic",
+
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+            ],
+            opens: "08:00",
+            closes: "18:00",
+          },
+        ],
+
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Servicios de Limpieza",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Limpieza residencial",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Limpieza de oficinas",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Limpieza profunda",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Limpieza post construcción",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Desinfección de espacios",
+              },
+            },
+          ],
+        },
+
+        sameAs: [
+          COMPANY.social.instagram,
+          COMPANY.social.facebook,
+          COMPANY.social.linkedin,
+        ],
+      },
+
+      {
+        "@type": "WebSite",
+        "@id": "https://limpidos.com/#website",
+        url: "https://limpidos.com",
+        name: "Limpidos",
+        inLanguage: "es",
+      },
+    ],
+  };
   return (
     <html lang="es" className={`${dmSans.variable} ${dmSerif.variable}`}>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>
