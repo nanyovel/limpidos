@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/ui/CookieBanner";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { COMPANY } from "@/lib/data";
+import Script from "next/script";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -72,27 +73,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://limpidos.com",
   },
-};
-
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: COMPANY.name,
-  url: "https://limpidos.com",
-  description: COMPANY.description,
-  telephone: COMPANY.phone,
-  email: COMPANY.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: COMPANY.address,
-  },
-  sameAs: [COMPANY.social.linkedin, COMPANY.social.facebook],
-  knowsAbout: [
-    "Limpieza empresarial",
-    "Outsourcing de limpieza",
-    "Limpieza industrial",
-    "Limpieza corporativa",
-  ],
 };
 
 export default function RootLayout({
@@ -211,6 +191,21 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2EEV99J6T0"
+          strategy="afterInteractive"
+        />
+
+        {/* Configuración */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-2EEV99J6T0');
+        `}
+        </Script>
       </head>
       <body>
         <Navbar />
