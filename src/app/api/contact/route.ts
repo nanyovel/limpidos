@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
       <hr>
 
-      <p>Este mensaje fue enviado desde cocinasmodernasrd.com</p>
+      <p>Este mensaje fue enviado desde limpidos.com</p>
       `,
     });
 

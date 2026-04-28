@@ -17,12 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/soluciones`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+    // {
+    //   url: `${baseUrl}/soluciones`,
+    //   lastModified: new Date(),
+    //   changeFrequency: "monthly",
+    //   priority: 0.9,
+    // },
     {
       url: `${baseUrl}/nosotros`,
       lastModified: new Date(),
