@@ -34,7 +34,14 @@ export const metadata: Metadata = {
 
   authors: [{ name: "Limpidos" }],
   creator: "Limpidos",
-
+  themeColor: "#1E3A8A",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
   // TODO: reemplaza este valor con el código real que te da Google Search Console
   // verification: { google: "TU_CODIGO_DE_VERIFICACION_AQUI" },
 
@@ -51,19 +58,27 @@ export const metadata: Metadata = {
         // ⚠️ IMPORTANTE: esto debe ser una foto real de 1200x630px
         // (equipo trabajando, oficina limpia, etc.) — NO el logo.
         // El logo se ve mal recortado/pixelado en previews de WhatsApp/Facebook.
-        url: "/og-image.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Limpidos — Limpieza Empresarial Profesional en República Dominicana",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Limpidos — Outsourcing de Limpieza Empresarial",
     description:
       "Reducimos sus costos operativos con limpieza profesional para empresas.",
-    images: ["/og-image.jpg"],
+    images: [
+      {
+        url: "/opengraph-image.png",
+        alt: "Limpidos — Limpieza Empresarial Profesional en República Dominicana",
+      },
+    ],
+    // Solución opcional para vincular cuenta corporativa (image_5539c2.png)
+    // site: "@limpidos_rd",
   },
   robots: {
     index: true,
