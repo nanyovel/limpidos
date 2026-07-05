@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/servicios/limpieza-de-hogar`,
+      url: `${baseUrl}/servicios/limpieza-de-hogares`,
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.85,
