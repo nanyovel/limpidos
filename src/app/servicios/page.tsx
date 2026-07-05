@@ -2,23 +2,32 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SERVICES } from "@/lib/data";
 import { CTASection } from "@/components/sections/CTASection";
+import {
+  Breadcrumbs,
+  buildBreadcrumbJsonLd,
+} from "@/components/ui/Breadcrumbs";
+
+const SITE_URL = "https://limpidos.com";
 
 export const metadata: Metadata = {
-  title:
-    "Servicios de Limpieza Empresarial | Oficinas, Industrial, Post-Construcción",
+  // Alineado con los servicios REALMENTE activos: Oficinas y Hogar.
+  // No prometer "industrial" o "post-construcción" hasta que existan en el sitio.
+  title: "Servicios de Limpieza para Oficinas y Hogares en RD",
   description:
-    "Limpieza de oficinas, limpieza industrial, post-construcción y mantenimiento continuo. Servicios profesionales de limpieza para empresas con estándares garantizados y cobertura total.",
-  keywords: [
-    "limpieza de oficinas empresariales",
-    "limpieza industrial profesional",
-    "limpieza post construccion empresas",
-    "mantenimiento limpieza corporativo",
-    "servicios limpieza B2B",
-  ],
-  alternates: { canonical: "https://limpidos.com/servicios" },
+    "Servicios profesionales de limpieza de oficinas y limpieza de hogar en República Dominicana. Outsourcing con personal capacitado, estándares garantizados y cobertura en Santo Domingo, Santiago, La Altagracia y todo el pais.",
+
+  alternates: { canonical: `${SITE_URL}/servicios` },
 };
 
 const iconPaths: Record<string, React.ReactNode> = {
+  home: (
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+    />
+  ),
   building: (
     <path
       strokeLinecap="round"
@@ -61,8 +70,43 @@ const cardColors = [
 ];
 
 export default function ServiciosPage() {
+  // Único array fuente para el breadcrumb: se usa tanto para renderizar
+  // el componente visual como para generar el schema. Así nunca pueden
+  // desalinearse entre sí.
+  const breadcrumbItems = [
+    { label: "Inicio", href: "/" },
+    { label: "Servicios" }, // último item, sin href = página actual
+  ];
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(breadcrumbItems, SITE_URL);
+
+  // Un nodo Service por cada servicio REAL y activo en SERVICES (lib/data.ts).
+  // Cada uno referencia al LocalBusiness definido en el layout como "provider",
+  // en vez de redefinir la organización desde cero.
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": SERVICES.map((service) => ({
+      "@type": "Service",
+      "@id": `${SITE_URL}/servicios#${service.id}-service`,
+      name: service.title,
+      serviceType: service.title,
+      description: service.description,
+      provider: { "@id": `${SITE_URL}/#business` },
+      areaServed: { "@type": "Country", name: "Dominican Republic" },
+      url: `${SITE_URL}/servicios#${service.id}`,
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="gradient-brand pt-32 pb-24 relative overflow-hidden">
         <div
@@ -72,17 +116,21 @@ export default function ServiciosPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center">
+            <Breadcrumbs items={breadcrumbItems} variant="light" />
+          </div>
           <span className="inline-block bg-accent-500/20 text-accent-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
             Catálogo de servicios
           </span>
+          {/* H1 alineado con lo que realmente se entrega debajo: Oficinas y Hogar */}
           <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
-            Limpieza profesional para cada
-            <br className="hidden sm:block" /> necesidad empresarial
+            Servicios de limpieza para oficinas y hogares en República
+            Dominicana.
           </h1>
           <p className="text-xl text-brand-200 max-w-2xl mx-auto mb-10">
-            Desde el mantenimiento diario de oficinas hasta limpiezas
-            industriales profundas. Cada servicio diseñado para superar los
-            estándares del sector.
+            Desde el mantenimiento diario de oficinas corporativas hasta la
+            limpieza profunda de su hogar. Cada servicio diseñado para superar
+            los estándares del sector.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contacto" className="btn-white">
@@ -197,6 +245,48 @@ export default function ServiciosPage() {
                     />
                   </svg>
                 </Link>
+                {service.id === "oficinas" && (
+                  <Link
+                    href="/servicios/limpieza-de-oficinas"
+                    className="inline-flex items-center gap-1.5 text-brand-600 text-sm font-semibold hover:gap-2.5 transition-all duration-200 mt-4 ml-4"
+                  >
+                    Leer guía completa
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </Link>
+                )}
+                {service.id === "hogar" && (
+                  <Link
+                    href="/servicios/limpieza-de-hogares"
+                    className="inline-flex items-center gap-1.5 text-brand-600 text-sm font-semibold hover:gap-2.5 transition-all duration-200 mt-4 ml-4"
+                  >
+                    Leer guía completa
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </Link>
+                )}
               </div>
 
               {/* Visual card */}
@@ -227,11 +317,15 @@ export default function ServiciosPage() {
 
                     <div className="space-y-3">
                       {[
-                        { label: "Personal certificado", icon: "👥" },
-                        { label: "Equipos industriales", icon: "⚙️" },
-                        { label: "Control de calidad", icon: "✓" },
-                        { label: "Reportes digitales", icon: "📊" },
-                        { label: "Gestor de cuenta", icon: "📞" },
+                        { label: "Ahorro economico", icon: "💰" },
+                        {
+                          label: "Reduccion de carga administrativa",
+                          icon: "📋",
+                        },
+                        { label: "Menor riesgo laboral", icon: "⚠️" },
+                        { label: "Enfoque en el core del negocio", icon: "🎯" },
+                        { label: "Personal capacitado", icon: "👥" },
+                        { label: "Gestor asignado", icon: "📞" },
                       ].map((item) => (
                         <div
                           key={item.label}
@@ -335,7 +429,6 @@ export default function ServiciosPage() {
                     false,
                     true,
                   ],
-                  // ["Equipos industriales incluidos", false, true],
                   ["Capacitación continua", false, true],
                   ["Reportes y trazabilidad", false, true],
                   [

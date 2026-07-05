@@ -5,7 +5,7 @@ const FOOTER_LINKS = {
   Servicios: [
     { href: "/servicios#oficinas", label: "Limpieza de Oficinas" },
     // { href: "/servicios#industrial", label: "Limpieza Industrial" },
-    { href: "/servicios#post-construccion", label: "Post-Construcción" },
+    { href: "/servicios#hogar", label: "Limpieza del hogar" },
     // { href: "/servicios#mantenimiento", label: "Mantenimiento Continuo" },
   ],
   // Soluciones: [
@@ -18,8 +18,10 @@ const FOOTER_LINKS = {
     { href: "/nosotros", label: "Nosotros" },
     { href: "/blog", label: "Blog" },
     { href: "/contacto", label: "Contacto" },
+    { href: "/faqs", label: "Preguntas Frecuentes" },
   ],
   Legal: [
+    { href: "/aviso-legal", label: "Aviso Legal" },
     { href: "/politica-privacidad", label: "Política de Privacidad" },
     { href: "/politica-cookies", label: "Política de Cookies" },
   ],
@@ -108,7 +110,16 @@ export function Footer() {
         <div className="border-t border-brand-800 pt-8 flex flex-col sm:flex-row items-center justify-around gap-4">
           <p className="text-brand-400 text-sm">
             © {new Date().getFullYear()} {COMPANY.name}. Todos los derechos
-            reservados.
+            reservados. Desarrollado por{" "}
+            <a
+              href="https://noarix.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-300 hover:text-[#fff] hover:underline"
+            >
+              Noarix
+            </a>
+            .
           </p>
           <div className="flex items-center gap-4">
             <a

@@ -2,33 +2,37 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+// import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { SERVICES, SOLUTIONS, STATS } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title:
-    "Limpidos — Outsourcing de Limpieza Empresarial | Limpieza de Oficinas e industrias",
-  description:
-    "Reducimos sus costos operativos con outsourcing de limpieza profesional para empresas. Oficinas, industrias y comercios. Personal capacitado, tecnología de gestión y garantía de satisfacción. Deje la limpieza en manos expertas y enfoque su tiempo en lo que realmente importa.",
+// Acortado a ~68 caracteres para reducir riesgo de truncamiento en el SERP
+const Title =
+  "Empresa de Limpieza para Oficinas, Industrias y hogar en RD | Limpidos";
+const Description =
+  "Empresa de limpieza en República Dominicana especializada en oficinas, industrias y comercios. Servicios de limpieza profesional y outsourcing.";
 
-  authors: [{ name: "Limpidos SRL" }],
+export const metadata: Metadata = {
+  // "absolute" ignora el title.template del layout padre.
+  // Sin esto, el <title> real terminaba duplicando "Limpidos" dos veces
+  // porque el layout raíz también le agrega su propio template al final.
+  title: { absolute: Title },
+  description: Description,
+
+  authors: [{ name: "Limpidos" }],
 
   openGraph: {
-    title:
-      "Limpidos — Outsourcing de Limpieza Empresarial | Limpieza de Oficinas e industrias",
-    description:
-      "Nos encargamos de la limpieza de su empresa para que usted pueda enfocarse en lo que realmente importa. Personal capacitado, tecnología de gestión y garantía de satisfacción. Reduzca costos operativos y mejore la productividad con nuestro servicio profesional de limpieza outsourcing.",
+    title: Title,
+    description: Description,
     url: "https://limpidos.com",
-    siteName: "Limpidos SRL",
+    siteName: "Limpidos",
     locale: "es_DO",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Limpidos — Outsourcing de Limpieza Empresarial",
-    description:
-      "Limpieza empresarial en Republica Dominicana | Limpieza de oficina | Conserjeria",
+    title: Title,
+    description: Description,
   },
   robots: {
     index: true,
@@ -66,6 +70,14 @@ const WHY_OUTSOURCE = [
 ];
 
 const iconPaths: Record<string, React.ReactNode> = {
+  home: (
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+    />
+  ),
   building: (
     <path
       strokeLinecap="round"
@@ -136,20 +148,6 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-
-      {/* Stats bar */}
-      {/* <div className="bg-brand-700 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {STATS.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl font-display font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-brand-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
       <BenefitsSection />
 
@@ -288,84 +286,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Solutions by sector */}
-      {/* <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="section-tag">Por tipo de empresa</span>
-            <h2 className="section-title mb-4">Soluciones para cada sector</h2>
-            <p className="section-subtitle max-w-2xl mx-auto">
-              Cada industria tiene requisitos específicos de higiene. Adaptamos
-              nuestros protocolos a las exigencias reales de su sector.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-            {SOLUTIONS.map((sol) => (
-              <Link
-                key={sol.id}
-                href={`/soluciones#${sol.id}`}
-                className="card group text-center"
-              >
-                <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-700 transition-all duration-300">
-                  <svg
-                    className="w-7 h-7 text-brand-600 group-hover:text-white transition-colors"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    {iconPaths[sol.icon]}
-                  </svg>
-                </div>
-                <h3 className="font-display font-semibold text-brand-900 mb-1 text-sm">
-                  {sol.sector}
-                </h3>
-                <p className="text-slate-400 text-xs">
-                  {sol.challenges.length} desafíos resueltos
-                </p>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center">
-            <Link href="/soluciones" className="btn-secondary">
-              Ver soluciones por sector
-            </Link>
-          </div>
-        </div>
-      </section> */}
-
       {/* <TestimonialsSection /> */}
-
-      {/* Trust strip */}
-      <section className="py-16 bg-white border-y border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            {/* <p className="text-slate-400 text-sm font-medium uppercase tracking-widest">
-              Lo que nos diferencia
-            </p> */}
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              {
-                icon: "🛡️",
-                label: "Personal con verificación de antecedentes",
-              },
-              { icon: "📊", label: "Reportes digitales en tiempo real" },
-              { icon: "⚡", label: "Soporte de emergencia 24/7" },
-              { icon: "✅", label: "Garantía de satisfacción 100%" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex flex-col items-center gap-3"
-              >
-                <span className="text-3xl">{item.icon}</span>
-                <p className="text-slate-600 text-sm font-medium leading-snug">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTASection />
     </>

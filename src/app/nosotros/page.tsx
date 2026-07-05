@@ -2,13 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { STATS } from "@/lib/data";
 import { CTASection } from "@/components/sections/CTASection";
+import {
+  Breadcrumbs,
+  buildBreadcrumbJsonLd,
+} from "@/components/ui/Breadcrumbs";
+
+const SITE_URL = "https://limpidos.com";
 
 export const metadata: Metadata = {
-  title:
-    "Nosotros | Limpidos — Empresa de Limpieza Empresarial con 12+ Años de Experiencia",
-  description:
-    "Conozca a Limpidos: más de 12 años especializados en outsourcing de limpieza para empresas. Procesos certificados, personal profesional y una cultura de excelencia que se refleja en cada servicio.",
-  alternates: { canonical: "https://limpidos.com/nosotros" },
+  // Sin "| Limpidos" incrustado a la mitad: el template del layout ya lo
+  // agrega una sola vez al final. Antes esto duplicaba la marca en el <title>.
+  title: `Nosotros — Empresa de Limpieza para Oficinas, Industrias y hogar en RD | Limpidos`,
+  // Acortada a ~150 caracteres
+  description: `Conozca a Limpidos: outsourcing de limpieza para empresas y el hogar en República Dominicana. Procesos certificados y personal profesional.`,
+  alternates: { canonical: `${SITE_URL}/nosotros` },
 };
 
 const VALUES = [
@@ -36,12 +43,6 @@ const VALUES = [
       "Adaptamos cada servicio a las necesidades específicas de su empresa. Escuchamos, ajustamos y mejoramos continuamente para garantizar resultados que realmente aporten valor.",
     icon: "✔",
   },
-  // {
-  //   title: "Sostenibilidad",
-  //   description:
-  //     "Utilizamos productos ecológicos certificados y practicas responsables con el medioambiente. Limpiamos sin dañar.",
-  //   icon: "♻",
-  // },
 ];
 
 const DIFFERENTIATORS = [
@@ -60,16 +61,6 @@ const DIFFERENTIATORS = [
     description:
       "Acceda a reportes de cada visita, incidencias y control de calidad desde su dispositivo. Transparencia total en todo momento.",
   },
-  // {
-  //   title: "Respuesta de emergencia 24/7",
-  //   description:
-  //     "Derrames, incidentes, eventos de último momento. Nuestro equipo de soporte está disponible las 24 horas para atender urgencias.",
-  // },
-  // {
-  //   title: "Certificaciones y protocolos",
-  //   description:
-  //     "Todo nuestro personal está certificado en seguridad, manejo de productos químicos y protocolos específicos por sector.",
-  // },
   {
     title: "Garantía de satisfacción",
     description:
@@ -77,37 +68,32 @@ const DIFFERENTIATORS = [
   },
 ];
 
-const TIMELINE = [
-  {
-    year: "2012",
-    event: "Fundación de Limpidos con foco exclusivo en clientes corporativos",
-  },
-  {
-    year: "2015",
-    event: "Expansión a servicios industriales y post-construcción",
-  },
-  {
-    year: "2018",
-    event: "Implementación del sistema de reportes digitales en tiempo real",
-  },
-  {
-    year: "2020",
-    event:
-      "Certificación en bioseguridad y adaptación a protocolos post-pandemia",
-  },
-  {
-    year: "2022",
-    event: "Superamos las 150 empresas cliente con contratos activos",
-  },
-  {
-    year: "2024",
-    event: "200+ empresas. Expansión a nuevos sectores y regiones",
-  },
-];
-
 export default function NosotrosPage() {
+  const breadcrumbItems = [
+    { label: "Inicio", href: "/" },
+    { label: "Nosotros" },
+  ];
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(breadcrumbItems, SITE_URL);
+
+  const aboutPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    url: `${SITE_URL}/nosotros`,
+    name: "Nosotros — Limpidos",
+    mainEntity: { "@id": `${SITE_URL}/#business` },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="gradient-brand pt-32 pb-24 relative overflow-hidden">
         <div
@@ -117,6 +103,7 @@ export default function NosotrosPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} variant="light" />
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="inline-block bg-accent-500/20 text-accent-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
@@ -140,19 +127,6 @@ export default function NosotrosPage() {
                 de sus operaciones.
               </p>
             </div>
-            {/* <div className="grid grid-cols-2 gap-4">
-              {STATS.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center"
-                >
-                  <div className="text-4xl font-display font-bold text-white mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-brand-300 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div> */}
           </div>
         </div>
       </section>
@@ -270,45 +244,6 @@ export default function NosotrosPage() {
           </div>
         </div>
       </section>
-
-      {/* Timeline */}
-      {/* <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block text-accent-400 text-sm font-semibold uppercase tracking-widest mb-3">
-              Nuestra historia
-            </span>
-            <h2 className="text-3xl font-display font-bold text-white">
-              12 años de crecimiento
-            </h2>
-          </div>
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-brand-700" />
-            <div className="space-y-10">
-              {TIMELINE.map((item) => (
-                <div key={item.year} className="flex gap-8 items-start">
-                  <div className="w-16 h-16 bg-brand-700 rounded-2xl flex items-center justify-center flex-shrink-0 z-10 relative">
-                    <span className="text-accent-400 font-display font-bold text-sm">
-                      {item.year}
-                    </span>
-                  </div>
-                  <div className="pt-4">
-                    <p className="text-slate-300 leading-relaxed">
-                      {item.event}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <CTASection
         title="Únase a las empresas que confían en Limpidos"

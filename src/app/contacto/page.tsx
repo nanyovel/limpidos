@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { COMPANY } from "@/lib/data";
+import {
+  Breadcrumbs,
+  buildBreadcrumbJsonLd,
+} from "@/components/ui/Breadcrumbs";
+
+const SITE_URL = "https://limpidos.com";
 
 export const metadata: Metadata = {
-  title:
-    "Solicitar Cotización | Contáctenos para Servicios de Limpieza Empresarial",
+  title: "Solicitar Cotización de Limpieza Empresarial",
+  // Alineada con los servicios REALES activos (Oficinas y Hogar), no con
+  // sectores que aún no tienen página ni contenido visible en el sitio.
   description:
-    "Solicite su cotización gratuita de limpieza empresarial. Atendemos oficinas, industrias, clínicas y comercios. Respuesta garantizada en menos de 24 horas.",
-  alternates: { canonical: "https://limpidos.com/contacto" },
+    "Solicite su cotización gratuita de limpieza de oficinas o limpieza de hogar en República Dominicana. Respuesta garantizada en menos de 24 horas.",
+  alternates: { canonical: `${SITE_URL}/contacto` },
 };
 
 const CONTACT_ITEMS = [
@@ -48,7 +56,11 @@ const CONTACT_ITEMS = [
     ),
     label: "Dirección",
     value: COMPANY.address,
-    href: "#",
+    // Antes era "#" (enlace muerto). Ahora abre la ubicación real en
+    // Google Maps, lo cual también ayuda a señales de SEO local.
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      COMPANY.address,
+    )}`,
   },
 ];
 
@@ -75,12 +87,54 @@ const PROCESS_STEPS = [
   },
 ];
 
+// Solo preguntas ESPECÍFICAS del proceso de contacto/cotización.
+// Todo lo demás (garantías, personal, flexibilidad de contrato, etc.)
+// ya vive en /faqs — evita duplicar contenido entre las dos páginas.
+const CONTACT_FAQS = [
+  {
+    q: "¿Atienden a pequeñas empresas o solo grandes corporaciones?",
+    a: "Trabajamos con todo tipo de empresas. Desde pymes con una sola oficina hasta corporaciones con múltiples sedes. Lo importante es que sea un cliente empresarial, no residencial.",
+  },
+  {
+    q: "¿Necesito agendar una visita antes de recibir una cotización?",
+    a: "No es obligatorio para una cotización inicial, pero recomendamos una visita o videollamada breve para ajustar el precio con precisión según sus instalaciones reales.",
+  },
+  {
+    q: "¿La cotización tiene algún costo o compromiso?",
+    a: "No. La cotización es completamente gratuita y sin ningún compromiso de contratación.",
+  },
+];
+
 export default function ContactoPage() {
+  const breadcrumbItems = [
+    { label: "Inicio", href: "/" },
+    { label: "Contacto" },
+  ];
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(breadcrumbItems, SITE_URL);
+
+  const contactPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    url: `${SITE_URL}/contacto`,
+    name: "Contacto — Limpidos",
+    mainEntity: { "@id": `${SITE_URL}/#business` },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="gradient-brand pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} variant="light" />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block bg-accent-500/20 text-accent-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
@@ -101,6 +155,12 @@ export default function ContactoPage() {
                   <a
                     key={item.label}
                     href={item.href}
+                    target={item.label === "Dirección" ? "_blank" : undefined}
+                    rel={
+                      item.label === "Dirección"
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     className="flex items-center gap-4 group"
                   >
                     <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-colors flex-shrink-0">
@@ -161,35 +221,15 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* FAQs */}
+      {/* FAQs — solo preguntas específicas del proceso de contacto.
+          Para todo lo demás, enlazamos a /faqs en vez de duplicar contenido. */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-title">Preguntas frecuentes</h2>
           </div>
           <div className="space-y-4">
-            {[
-              {
-                q: "¿Atienden a pequeñas empresas o solo grandes corporaciones?",
-                a: "Trabajamos con todo tipo de empresas. Desde pymes con una sola oficina hasta corporaciones con múltiples sedes. Lo importante es que sea un cliente empresarial, no residencial.",
-              },
-              {
-                q: "¿Cuánto tiempo tarda en comenzar el servicio una vez firmado el contrato?",
-                a: "Normalmente iniciamos operaciones entre 3 y 7 días hábiles después de la firma del contrato. Este tiempo lo usamos para asignar y preparar el equipo específico para sus instalaciones.",
-              },
-              {
-                q: "¿Qué sucede si el resultado no cumple mis expectativas?",
-                a: "Tenemos garantía de satisfacción 100%. Si algo no cumple el estándar acordado, lo corregimos sin costo adicional y sin discusión. Su satisfacción es nuestra prioridad.",
-              },
-              {
-                q: "¿Puedo cambiar la frecuencia o los servicios contratados?",
-                a: "Absolutamente. Nuestros contratos son flexibles. Si sus necesidades cambian (nueva sede, temporada alta, obras), adaptamos el servicio con un simple aviso a su gestor de cuenta.",
-              },
-              {
-                q: "¿El personal tiene verificación de antecedentes?",
-                a: "Sí. Todo nuestro personal pasa por verificación de antecedentes penales, referencias laborales y capacitación certificada antes de trabajar en las instalaciones de cualquier cliente.",
-              },
-            ].map((faq, i) => (
+            {CONTACT_FAQS.map((faq, i) => (
               <details
                 key={i}
                 className="group border border-slate-200 rounded-xl overflow-hidden"
@@ -215,6 +255,27 @@ export default function ContactoPage() {
                 </div>
               </details>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/faqs"
+              className="inline-flex items-center gap-1.5 text-brand-600 text-sm font-semibold hover:gap-2.5 transition-all duration-200"
+            >
+              Ver todas las preguntas frecuentes
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

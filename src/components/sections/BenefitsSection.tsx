@@ -18,7 +18,7 @@ const BENEFITS = [
     title: "Reducción de costos operativos",
     description:
       "Eliminamos los costos ocultos del personal interno: cargas sociales, vacaciones, bajas médicas, capacitaciones y equipos. Paga una tarifa fija y predecible.",
-    highlight: "Ahorro economico promedio del 15–20%",
+    highlight: "Ahorro economico promedio total del 15–35%",
   },
   {
     icon: (
@@ -137,8 +137,8 @@ export function BenefitsSection() {
             Beneficios concretos para su empresa
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
-            No vendemos limpieza, vendemos tranquilidad operativa, ahorro
-            comprobable y un entorno de trabajo que eleva su imagen corporativa.
+            No vendemos limpieza, vendemos ahorro economico comprobable,
+            tranquilidad operativa y un entorno de trabajo impecable.
           </p>
         </div>
 

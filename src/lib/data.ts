@@ -22,9 +22,9 @@ export const SERVICES: Service[] = [
     id: "oficinas",
     title: "Limpieza de Oficinas",
     description:
-      "Mantenemos sus espacios corporativos impecables para que su equipo trabaje en un entorno productivo, saludable y profesional.",
+      "Somos una empresas de limpieza que ofrece un completo servicio de limpieza para oficinas, comercios y proyectos de construcción. Como compañía de limpieza especializada, brindamos soluciones de aseo adaptadas a cada cliente, desde la limpieza de obra hasta el mantenimiento diario de oficinas. Si busca empresas de aseo o una empresa de limpieza confiable, nuestro equipo garantiza espacios limpios, seguros y con una imagen profesional.",
     benefits: [
-      "Servicio diario, semanal o personalizado",
+      "Servicio continuo o por proyecto",
       "Personal capacitado y confiable",
       "Productos certificados ecológicos",
       "Supervisión y control de calidad",
@@ -47,19 +47,33 @@ export const SERVICES: Service[] = [
   //   icon: "factory",
   // },
   {
-    id: "post-construccion",
-    title: "Limpieza Post-Construcción",
+    id: "hogar",
+    title: "Limpieza de Hogar",
     description:
-      "Dejamos sus instalaciones listas para operar después de obras, remodelaciones o nuevas construcciones, eliminando polvo, residuos y materiales.",
+      "Servicios de limpieza residencial para mantener su hogar impecable y saludable.",
     benefits: [
-      "Eliminación completa de escombros finos",
-      "Limpieza de vidrios y superficies",
-      "Preparación para apertura inmediata",
-      "Equipo especializado con EPP",
-      "Servicio en una sola visita o etapas",
+      "Personal capacitado y confiable",
+      "Productos seguros para el hogar",
+      "Limpieza completa de todas las áreas",
+      "Flexibilidad en programación",
+      "Garantía de satisfacción 100%",
     ],
-    icon: "hammer",
+    icon: "home",
   },
+  // {
+  //   id: "post-construccion",
+  //   title: "Limpieza Post-Construcción",
+  //   description:
+  //     "Dejamos sus instalaciones listas para operar después de obras, remodelaciones o nuevas construcciones, eliminando polvo, residuos y materiales.",
+  //   benefits: [
+  //     "Eliminación completa de escombros finos",
+  //     "Limpieza de vidrios y superficies",
+  //     "Preparación para apertura inmediata",
+  //     "Equipo especializado con EPP",
+  //     "Servicio en una sola visita o etapas",
+  //   ],
+  //   icon: "hammer",
+  // },
   // {
   //   id: "mantenimiento",
   //   title: "Mantenimiento Continuo",
@@ -195,113 +209,6 @@ export const TESTIMONIALS: Testimonial[] = [
     content:
       "Limpidos nos da cobertura en 8 tiendas con un solo contrato. Ya no tenemos que contratar, capacitar ni gestionar personal en cada local. Simplemente funciona, y nuestros clientes lo notan en el estado de nuestras tiendas.",
     rating: 5,
-  },
-];
-
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    slug: "beneficios-outsourcing-limpieza-empresarial",
-    title: "7 Beneficios Clave del Outsourcing de Limpieza para su Empresa",
-    excerpt:
-      "Descubra cómo tercerizar la limpieza reduce costos ocultos, elimina la carga administrativa y garantiza estándares profesionales que el personal interno no puede alcanzar.",
-    date: "2024-03-15",
-    readTime: "6 min",
-    category: "Outsourcing",
-    content: `
-El outsourcing de servicios de limpieza es una de las decisiones de gestión más inteligentes que puede tomar una empresa moderna. Más allá de la percepción inicial de que "es solo limpieza", la realidad es que externalizar este servicio tiene un impacto directo en la rentabilidad, la productividad y la imagen corporativa.
-
-## 1. Reducción real de costos operativos
-
-Cuando una empresa contrata personal de limpieza interno, el costo visible (el salario) es solo la punta del iceberg. Los costos ocultos incluyen cargas sociales y beneficios de ley, gestión de vacaciones y ausencias, capacitación continua, compra y mantenimiento de equipos, gestión de productos y suministros, y supervisión del desempeño.
-
-Con Limpidos, paga una tarifa mensual fija y predecible. Sin sorpresas, sin costos variables, sin horas extras.
-
-## 2. Elimina la carga administrativa de RRHH
-
-Gestionar personal de limpieza consume tiempo de sus líderes de Recursos Humanos: contratos, nóminas, bajas médicas, reemplazos, conflictos laborales. Al tercerizar, toda esa carga desaparece. Limpidos asume la responsabilidad patronal completa.
-
-## 3. Personal especializado y capacitado
-
-Nuestro equipo no es personal general: son especialistas en limpieza profesional con formación continua en técnicas, productos y protocolos de seguridad. La diferencia en resultados es inmediata y visible.
-
-## 4. Tecnología y equipos industriales
-
-Las empresas de limpieza profesionales invierten en equipos especializados que una empresa no justifica adquirir para uso interno: aspiradoras industriales, fregadoras automáticas, equipos de presión, desinfectantes certificados.
-
-## 5. Flexibilidad y escalabilidad
-
-¿Abrieron una nueva sede? ¿Necesitan limpieza extra antes de una auditoría? Con un proveedor externo, adaptar el servicio es cuestión de una llamada. Sin procesos de contratación, sin demoras.
-
-## 6. Cumplimiento normativo garantizado
-
-Limpidos se mantiene actualizado en todas las normativas de higiene, seguridad laboral y medioambientales. Su empresa queda cubierta ante cualquier inspección o auditoría sin esfuerzo adicional de su parte.
-
-## 7. Enfoque en su core business
-
-El tiempo y la energía que dedica a gestionar limpieza puede reinvertirse en lo que realmente genera valor para su empresa. El outsourcing le devuelve ese recurso más valioso: el tiempo de sus líderes.
-
----
-
-**¿Listo para calcular cuánto puede ahorrar su empresa?** Solicite una cotización gratuita y nuestros asesores le presentarán un análisis comparativo personalizado.
-    `,
-  },
-  {
-    slug: "como-reducir-costos-operativos-empresa",
-    title:
-      "Cómo Reducir Costos Operativos sin Sacrificar Calidad: La Guía para Directores",
-    excerpt:
-      "La limpieza es uno de los costos operativos más optimizables. Le mostramos un marco práctico para analizar, comparar y decidir entre personal interno vs. outsourcing.",
-    date: "2024-02-28",
-    readTime: "8 min",
-    category: "Gestión Empresarial",
-    content: `
-Reducir costos operativos sin comprometer la calidad es el reto permanente de todo director de operaciones. Una de las áreas con mayor potencial de optimización —y frecuentemente subestimada— es la gestión de servicios de soporte, especialmente la limpieza.
-
-## El verdadero costo del personal de limpieza interno
-
-Muchos directores calculan el costo de la limpieza interna solo por el salario del trabajador. Pero el Costo Total de Empleado (CTE) es significativamente mayor...
-
-## El modelo de outsourcing: costos previsibles
-
-Al contratar un servicio de limpieza profesional como Limpidos, el modelo cambia completamente. Tiene un costo fijo mensual que incluye absolutamente todo: personal, supervisión, productos, equipos, seguros y reemplazos.
-
-## Cómo hacer el análisis en su empresa
-
-Siga este proceso para calcular el potencial de ahorro en su organización:
-
-1. Levante el costo total actual (CTE de cada empleado de limpieza)
-2. Sume los costos indirectos (administración, espacio, equipos)
-3. Solicite cotizaciones a proveedores especializados
-4. Compare no solo el costo, sino el estándar de calidad esperado
-5. Calcule el ROI a 12 meses
-
-En la mayoría de los casos, el outsourcing resulta entre un 20% y 40% más económico considerando todos los factores.
-    `,
-  },
-  {
-    slug: "normativas-higiene-empresarial-cumplimiento",
-    title:
-      "Normativas de Higiene Empresarial: Lo que su Empresa Debe Cumplir en 2024",
-    excerpt:
-      "Una guía completa sobre las regulaciones de higiene y saneamiento que aplican a empresas, oficinas e industrias, y cómo garantizar el cumplimiento sin complicaciones.",
-    date: "2024-01-20",
-    readTime: "7 min",
-    category: "Normativas",
-    content: `
-El incumplimiento de normativas de higiene puede resultar en multas, cierres temporales, daños reputacionales e incluso responsabilidades legales. Conocer qué exige la ley y cómo cumplirlo es fundamental para cualquier empresa responsable.
-
-## Marco normativo general
-
-Las empresas están sujetas a diversas regulaciones dependiendo de su sector, tamaño y actividad. En términos de higiene y saneamiento, las principales normativas involucran el Código de Trabajo (condiciones de trabajo saludables), Ley de Salud Pública, Reglamentos sectoriales (especialmente en salud, alimentos e industria), y Normas OSHA adaptadas localmente.
-
-## Qué exigen las inspecciones
-
-Durante una inspección, los auditores verifican frecuencia y registros de limpieza, disponibilidad de productos de higiene, estado de sanitarios y áreas comunes, manejo de residuos, y capacitación del personal en higiene.
-
-## Cómo Limpidos le garantiza el cumplimiento
-
-Nuestros servicios incluyen documentación completa para auditorías: registros de frecuencia de limpieza, fichas técnicas de productos utilizados, certificaciones del personal, y protocolos escritos por área. Su empresa siempre estará lista para cualquier inspección.
-    `,
   },
 ];
 

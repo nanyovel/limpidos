@@ -4,10 +4,9 @@ import { useState } from "react";
 
 const SERVICE_OPTIONS = [
   "Limpieza de Oficinas",
-  "Limpieza Industrial",
+  "Limpieza de Hogares",
   "Limpieza Post-Construcción",
-  "Mantenimiento General",
-  "Múltiples Servicios / No estoy seguro",
+  "Otros",
 ];
 
 export function ContactForm() {
@@ -31,7 +30,7 @@ export function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    >,
   ) => {
     console.log({ ...form, [e.target.name]: e.target.value });
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -76,7 +75,7 @@ export function ContactForm() {
       // ✅ SI FALLA → enviar a WhatsApp
       if (!res.ok || data.error) {
         const msg = encodeURIComponent(
-          `Nuevo lead:\nNombre: ${nombre}\nTeléfono: ${telefono}\nEmail: ${email}\nMensaje: ${mensaje}`
+          `Nuevo lead:\nNombre: ${nombre}\nTeléfono: ${telefono}\nEmail: ${email}\nMensaje: ${mensaje}`,
         );
 
         window.open(`https://wa.me/18493419890?text=${msg}`, "_blank");
@@ -97,7 +96,7 @@ export function ContactForm() {
       console.error("Error de red:", error);
 
       const msg = encodeURIComponent(
-        `Nuevo lead:\nNombre: ${nombre}\nTeléfono: ${telefono}\nEmail: ${email}\nPresupuesto: \nMensaje: ${mensaje}`
+        `Nuevo lead:\nNombre: ${nombre}\nTeléfono: ${telefono}\nEmail: ${email}\nPresupuesto: \nMensaje: ${mensaje}`,
       );
 
       window.open(`https://wa.me/18493419890?text=${msg}`, "_blank");
@@ -178,7 +177,7 @@ export function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-1.5">
-            Email corporativo <span className="text-red-500">*</span>
+            Email <span className="text-red-500">*</span>
           </label>
           <input
             type="email"

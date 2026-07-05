@@ -25,23 +25,19 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://limpidos.com"),
   title: {
-    template: "%s | Limpidos — Limpieza Empresarial Profesional",
-    default: "Limpidos — Outsourcing de Limpieza Empresarial | Servicios B2B",
+    template: "%s | Limpidos",
+    default: "Limpidos — Outsourcing de Limpieza Empresarial en RD",
   },
+  // Acortada a ~155 caracteres para que no se trunque en el snippet de Google
   description:
-    "Limpidos es su aliado estratégico en outsourcing de limpieza empresarial. Reducimos sus costos operativos, eliminamos la gestión de personal y garantizamos estándares profesionales para oficinas, industrias y comercios.",
-  keywords: [
-    "limpieza empresarial",
-    "servicios de limpieza para empresas",
-    "outsourcing de limpieza",
-    "limpieza de oficinas",
-    "limpieza industrial",
-    "servicios de limpieza corporativa",
-    "tercerización de limpieza",
-    "limpieza profesional B2B",
-  ],
+    "Outsourcing de limpieza empresarial en República Dominicana. Reducimos costos operativos y gestionamos el personal por usted. Oficinas, industrias y comercios.",
+
   authors: [{ name: "Limpidos" }],
   creator: "Limpidos",
+
+  // TODO: reemplaza este valor con el código real que te da Google Search Console
+  // verification: { google: "TU_CODIGO_DE_VERIFICACION_AQUI" },
+
   openGraph: {
     type: "website",
     locale: "es_DO",
@@ -49,13 +45,16 @@ export const metadata: Metadata = {
     siteName: "Limpidos",
     title: "Limpidos — Outsourcing de Limpieza Empresarial",
     description:
-      "Reducimos sus costos operativos con limpieza profesional para empresas. Oficinas, industrias, clínicas y comercios.",
+      "Reducimos sus costos operativos con limpieza profesional para empresas. Oficinas, industrias y comercios en República Dominicana.",
     images: [
       {
-        url: "https://limpidos.com/img/logo200x200.png",
+        // ⚠️ IMPORTANTE: esto debe ser una foto real de 1200x630px
+        // (equipo trabajando, oficina limpia, etc.) — NO el logo.
+        // El logo se ve mal recortado/pixelado en previews de WhatsApp/Facebook.
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Limpidos — Limpieza Empresarial Profesional",
+        alt: "Limpidos — Limpieza Empresarial Profesional en República Dominicana",
       },
     ],
   },
@@ -64,6 +63,7 @@ export const metadata: Metadata = {
     title: "Limpidos — Outsourcing de Limpieza Empresarial",
     description:
       "Reducimos sus costos operativos con limpieza profesional para empresas.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -84,15 +84,16 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "CleaningService",
+        "@type": "LocalBusiness",
         "@id": "https://limpidos.com/#business",
         name: COMPANY.name,
         description: COMPANY.description,
         url: "https://limpidos.com",
-        telephone: COMPANY.phone,
+        telephone: "+18493419890",
         email: COMPANY.email,
         priceRange: "$$",
         image: "https://limpidos.com/og-image.jpg",
+        logo: "https://limpidos.com/logo200x200.png",
 
         address: {
           "@type": "PostalAddress",
@@ -108,7 +109,7 @@ export default function RootLayout({
           longitude: -69.9327212,
         },
 
-        areaServed: "Dominican Republic",
+        areaServed: { "@type": "Country", name: "Dominican Republic" },
 
         openingHoursSpecification: [
           {
@@ -132,38 +133,11 @@ export default function RootLayout({
           itemListElement: [
             {
               "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Limpieza residencial",
-              },
+              itemOffered: { "@type": "Service", name: "Limpieza de oficinas" },
             },
             {
               "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Limpieza de oficinas",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Limpieza profunda",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Limpieza post construcción",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Desinfección de espacios",
-              },
+              itemOffered: { "@type": "Service", name: "Limpieza de hogar" },
             },
           ],
         },
@@ -181,6 +155,7 @@ export default function RootLayout({
         url: "https://limpidos.com",
         name: "Limpidos",
         inLanguage: "es",
+        publisher: { "@id": "https://limpidos.com/#business" },
       },
     ],
   };

@@ -20,17 +20,18 @@ export function HeroSection() {
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
               <span className="w-2 h-2 bg-accent-400 rounded-full animate-pulse" />
               <span className="text-white/90 text-sm font-medium">
-                Servicios de limpieza empresarial
+                Limpieza empresarial profesional.
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Limpieza empresarial profesional.
+              Limpieza empresarial en República Dominicana
             </h1>
 
             <p className="text-xl text-brand-200 leading-relaxed mb-8 max-w-xl">
-              Soluciones profesionales de conserjería empresarial para oficinas,
-              industrias y comercios en la República Dominicana.
+              Somos una empresa de limpieza, especializada en limpieza de
+              oficinas, conserjería empresarial y entornos corporativos en Santo
+              Domingo, Santiago, La Altagracia y todo el pais.
             </p>
 
             {/* <div className="flex flex-col sm:flex-row gap-4 mb-12">

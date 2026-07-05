@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { COMPANY } from "@/lib/data";
 import Image from "next/image";
 
@@ -15,32 +14,20 @@ const NAV_LINKS = [
   { href: "/contacto", label: "Contacto" },
 ];
 
-// Rutas que SIEMPRE deben tener el header sólido (fondo blanco/azul, sin transparencia)
-// Usa coincidencia por prefijo, así "/legal/privacidad" también matchea si empieza con "/legal"
-const SOLID_HEADER_ROUTES = ["/politica-privacidad", "/politica-cookies"];
-
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
-
-  const forceSolid = SOLID_HEADER_ROUTES.some(
-    (route) => pathname === route || pathname.startsWith(`${route}/`),
-  );
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    handleScroll(); // evalúa el estado inicial al cambiar de ruta
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
-
-  const isSolid = forceSolid || scrolled;
+  }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isSolid
+        scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100"
           : "bg-transparent border-b"
       }`}
@@ -51,15 +38,18 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8  rounded-lg flex items-center justify-center  transition-colors">
               <Image
-                src={"/logo.svg"}
+                src={"logo.svg"}
                 alt={COMPANY.name}
                 width={32}
                 height={32}
               />
+              {/* <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
+                <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.78 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg> */}
             </div>
             <span
               className={`text-xl font-display font-regular transition-colors ${
-                isSolid ? "text-[#176acf]" : "text-white"
+                scrolled ? "text-[#176acf]" : "text-white"
               }`}
             >
               {COMPANY.name}
@@ -73,7 +63,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  isSolid
+                  scrolled
                     ? "text-slate-600 hover:text-brand-700 hover:bg-slate-100"
                     : "text-white/90 hover:text-white hover:bg-white/10"
                 }`}
@@ -89,7 +79,7 @@ export function Navbar() {
               <Link
                 href="tel:+18493419890"
                 className={`flex items-center gap-2 text-sm font-medium  p-2 rounded text-foreground  ${
-                  isSolid
+                  scrolled
                     ? "text-slate-700 hover:bg-slate-100"
                     : "text-white hover:bg-white/10"
                 }`}
@@ -113,7 +103,7 @@ export function Navbar() {
               <Link
                 href="mailto:ventas@limpidos.com"
                 className={`flex items-center gap-2 text-sm font-medium  p-2 rounded text-foreground  ${
-                  isSolid
+                  scrolled
                     ? "text-slate-700 hover:bg-slate-100"
                     : "text-white hover:bg-white/10"
                 }`}
@@ -158,7 +148,7 @@ export function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isSolid
+              scrolled
                 ? "text-slate-700 hover:bg-slate-100"
                 : "text-white hover:bg-white/10"
             }`}
