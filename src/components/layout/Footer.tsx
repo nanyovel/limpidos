@@ -1,12 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY } from "@/lib/data";
 
 const FOOTER_LINKS = {
   Servicios: [
-    { href: "/servicios#oficinas", label: "Limpieza de Oficinas" },
-    // { href: "/servicios#industrial", label: "Limpieza Industrial" },
-    { href: "/servicios#hogar", label: "Limpieza del hogar" },
-    // { href: "/servicios#mantenimiento", label: "Mantenimiento Continuo" },
+    { href: "/servicios", label: "Todos los Servicios" },
+    { href: "/servicios/limpieza-de-oficinas", label: "Limpieza de Oficinas" },
+    { href: "/servicios/limpieza-de-hogar", label: "Limpieza de Hogar" },
   ],
   // Soluciones: [
   //   { href: "/soluciones#corporativas", label: "Oficinas Corporativas" },
@@ -64,18 +64,25 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
-                  <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.78 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
+              {/* Antes había un ícono SVG genérico distinto al logo real
+                  (usado correctamente en el Navbar). Ahora usa el mismo
+                  archivo, para mantener consistencia de marca en todo el sitio. */}
+              <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/logo.svg"
+                  alt={COMPANY.name}
+                  width={32}
+                  height={32}
+                />
               </div>
               <span className="text-xl font-display font-bold">
                 {COMPANY.name}
               </span>
             </Link>
             <p className="text-brand-300 text-sm leading-relaxed mb-4">
-              Outsourcing especializado de limpieza para empresas. Garantizando
-              estándares profesionales para organizaciones líderes.
+              Outsourcing especializado de limpieza para empresas y hogares.
+              Garantizando estándares profesionales para organizaciones líderes
+              y familias.
             </p>
             <div className="space-y-2 text-sm text-brand-300">
               <p>{COMPANY.phone}</p>
