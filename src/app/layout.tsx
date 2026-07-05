@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   // TODO: reemplaza este valor con el código real que te da Google Search Console
   // verification: { google: "TU_CODIGO_DE_VERIFICACION_AQUI" },
-
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "es_DO",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
       },
     ],
     // Solución opcional para vincular cuenta corporativa (image_5539c2.png)
-    // site: "@limpidos_rd",
+    site: "@limpidos_rd",
   },
   robots: {
     index: true,
