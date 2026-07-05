@@ -92,7 +92,7 @@ export default function RootLayout({
         telephone: "+18493419890",
         email: COMPANY.email,
         priceRange: "$$",
-        image: "https://limpidos.com/og-image.jpg",
+        image: "https://limpidos.com/imagenREDE_OG.jpg",
         logo: "https://limpidos.com/logo200x200.png",
 
         address: {
@@ -100,6 +100,7 @@ export default function RootLayout({
           streetAddress: "Av. Sarasota esquina Av. Enrique Jimenez Moya",
           addressLocality: "Santo Domingo",
           addressRegion: "Distrito Nacional",
+          postalCode: "10100",
           addressCountry: "DO",
         },
 
