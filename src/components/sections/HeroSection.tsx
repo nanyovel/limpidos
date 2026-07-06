@@ -33,41 +33,18 @@ export function HeroSection() {
               oficinas, conserjería empresarial y entornos corporativos en Santo
               Domingo, Santiago, La Altagracia y todo el pais.
             </p>
-
-            {/* <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Link href="/contacto" className="btn-white text-base px-8 py-4">
-                Solicitar Cotización Gratuita
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-              <Link
-                href="/servicios"
-                className="btn-secondary border-white/40 text-white hover:bg-white/10 hover:border-white text-base px-8 py-4"
-              >
-                Ver Servicios
-              </Link>
-            </div> */}
           </div>
 
           {/* Right: Stats card */}
           <div className="flex items-center justify-center border-white  w-25 min-h-32">
             <Image
               src="/womanCleaning.jpg"
-              alt="Mujer limpiando"
+              alt="Personal profesional realizando limpieza de oficinas en República Dominicana"
               width={300}
               height={400}
-              className="border border-white rounded-2xl animate-fade-slide-in delay-200"
+              priority
+              sizes="(max-width: 1024px) 280px, 300px"
+              className="rounded-2xl border border-white animate-fade-slide-in delay-200"
             />
           </div>
         </div>

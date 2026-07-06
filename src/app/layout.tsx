@@ -36,10 +36,7 @@ export const metadata: Metadata = {
   creator: "Limpidos",
   themeColor: "#1E3A8A",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-    ],
+    icon: [{ url: "/icon.svg", sizes: "any" }],
     apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   // TODO: reemplaza este valor con el código real que te da Google Search Console
