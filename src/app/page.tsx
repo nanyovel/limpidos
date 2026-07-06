@@ -7,7 +7,8 @@ import { CTASection } from "@/components/sections/CTASection";
 import { SERVICES, SOLUTIONS, STATS } from "@/lib/data";
 
 // Acortado a ~68 caracteres para reducir riesgo de truncamiento en el SERP
-const Title = "Empresa de Limpieza para Oficinas, Industrias y hogar en RD";
+const Title =
+  "Empresa de Limpieza empresarial: Oficinas, Industrias y hogar en Republica Dominicana";
 const Description =
   "Empresa de limpieza en República Dominicana especializada en oficinas, industrias y comercios. Servicios de limpieza profesional y outsourcing.";
 

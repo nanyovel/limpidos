@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://limpidos.com"),
   title: {
     template: "%s | Limpidos",
-    default: "Limpidos — Outsourcing de Limpieza Empresarial en RD",
+    default:
+      "Limpidos — Outsourcing de Limpieza Empresarial en Republica Dominicana",
   },
   // Acortada a ~155 caracteres para que no se trunque en el snippet de Google
   description:
@@ -41,7 +42,6 @@ export const metadata: Metadata = {
   },
   // TODO: reemplaza este valor con el código real que te da Google Search Console
   // verification: { google: "TU_CODIGO_DE_VERIFICACION_AQUI" },
-  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "es_DO",

@@ -76,65 +76,68 @@ Con un servicio de limpieza empresarial tercerizado, usted paga por un resultado
 **¿Listo para calcular cuánto puede ahorrar su empresa?** Solicite una cotización gratuita y nuestros asesores le presentarán un análisis comparativo personalizado para su empresa en República Dominicana.
     `,
   },
-  //   {
-  //     slug: "como-reducir-costos-operativos-empresa",
-  //     title:
-  //       "Cómo Reducir Costos Operativos en su Empresa sin Sacrificar Calidad: Guía para Gerentes en RD",
-  //     excerpt:
-  //       "Para gerentes de Compras, RRHH y Mantenimiento en República Dominicana: aprenda a calcular el verdadero Costo Total de Empleado (incluyendo AFP, ARS, cesantía y prestaciones) y compárelo con el modelo de servicio de limpieza para empresas tercerizado.",
-  //     date: "2026-07-07",
-  //     readTime: "8 min",
-  //     category: "Gestión Empresarial",
-  //     image: "/imagenes/blog/conserje.jpg",
-  //     content: `
-  // Reducir costos operativos sin comprometer la calidad es el reto permanente de todo gerente de Compras, RRHH o Mantenimiento en República Dominicana. Una de las áreas con mayor potencial de optimización —y frecuentemente subestimada— es el servicio de limpieza para empresas.
 
-  // ## El verdadero costo del personal de limpieza interno en RD
+  {
+    slug: "como-reducir-costos-operativos-empresa",
+    title: "Cómo Reducir Costos: Tercerizando la Limpieza Empresarial",
+    excerpt:
+      "Descubra cómo calcular el Costo Total de Empleado (AFP, ARS, cesantía) y cuánto ahorra su empresa contratando limpieza tercerizada en RD.",
+    date: "2026-07-07",
+    readTime: "8 min",
+    category: "Gestión Empresarial",
+    image: "/imagenes/blog/dineroLimpieza1.jpg",
 
-  // Muchas empresas dominicanas calculan el costo de la limpieza interna solo por el salario del trabajador. Pero el Costo Total de Empleado (CTE), bajo las leyes dominicanas, es significativamente mayor e incluye:
+    content: `
+Reducir costos operativos sin comprometer la calidad es el reto permanente de todo gerente de Compras, RRHH o Mantenimiento en República Dominicana. Una de las áreas con mayor potencial de optimización —y frecuentemente subestimada— es el servicio de limpieza para empresas.
 
-  // - Aporte patronal a la AFP (fondo de pensiones).
-  // - Aporte patronal a la ARS (Seguro Familiar de Salud).
-  // - Provisión de cesantía y prestaciones laborales según el Código de Trabajo dominicano.
-  // - Vacaciones, regalía pascual y bonificación de fin de año.
-  // - Costos de reclutamiento, capacitación y alta rotación, común en personal de limpieza.
-  // - Equipos, productos de limpieza y su mantenimiento.
-  // - Tiempo de supervisión de su gerente de mantenimiento o administrador.
+## El verdadero costo del personal de limpieza interno en RD
 
-  // Cuando se suman todos estos factores, el costo real de un empleado de limpieza interno suele superar por mucho el salario base que aparece en la nómina.
+Muchas empresas dominicanas calculan el costo de la limpieza interna solo por el salario del trabajador. Pero el Costo Total de Empleado (CTE), bajo las leyes dominicanas, es significativamente mayor e incluye:
 
-  // ## El modelo de outsourcing: costos previsibles
+- Aporte patronal a la AFP (fondo de pensiones).
+- Aporte patronal a la ARS (Seguro Familiar de Salud).
+- Provisión de cesantía y prestaciones laborales según el Código de Trabajo dominicano.
+- Vacaciones, regalía pascual y bonificación de fin de año.
+- Costos de reclutamiento, capacitación y alta rotación, común en personal de limpieza.
+- Equipos, productos de limpieza y su mantenimiento.
+- Tiempo de supervisión de su gerente de mantenimiento o administrador.
 
-  // Al contratar una empresa de limpieza profesional como Limpidos, el modelo cambia completamente. Usted paga una tarifa fija mensual que incluye absolutamente todo: personal, supervisión, productos, equipos, cumplimiento con la Tesorería de la Seguridad Social (TSS) y reemplazos ante ausencias.
+Cuando se suman todos estos factores, el costo real de un empleado de limpieza interno suele superar por mucho el salario base que aparece en la nómina.
 
-  // ## Cómo hacer el análisis en su empresa
+## El modelo de outsourcing: costos previsibles
 
-  // Siga este proceso, recomendado para gerentes de Compras y RRHH en República Dominicana, para calcular el potencial de ahorro en su organización:
+Al contratar una empresa de limpieza profesional como Limpidos, el modelo cambia completamente. Usted paga una tarifa fija mensual que incluye absolutamente todo: personal, supervisión, productos, equipos, cumplimiento con la Tesorería de la Seguridad Social (TSS) y reemplazos ante ausencias.
 
-  // 1. Levante el costo total actual (CTE de cada empleado de limpieza, incluyendo AFP, ARS y cesantía).
-  // 2. Sume los costos indirectos (administración de nómina, espacio, equipos, supervisión).
-  // 3. Solicite cotizaciones a compañías de limpieza especializadas en el mercado dominicano.
-  // 4. Compare no solo el costo, sino el estándar de calidad y cumplimiento legal ofrecido.
-  // 5. Calcule el retorno de inversión (ROI) proyectado a 12 meses.
+## Cómo hacer el análisis en su empresa
 
-  // En la mayoría de los casos analizados en empresas dominicanas, el servicio de limpieza tercerizado resulta entre un **20% y un 40% más económico** considerando todos los factores legales y operativos.
+Siga este proceso, recomendado para gerentes de Compras y RRHH en República Dominicana, para calcular el potencial de ahorro en su organización:
 
-  // ---
+1. Levante el costo total actual (CTE de cada empleado de limpieza, incluyendo AFP, ARS y cesantía).
+2. Sume los costos indirectos (administración de nómina, espacio, equipos, supervisión).
+3. Solicite cotizaciones a compañías de limpieza especializadas en el mercado dominicano.
+4. Compare no solo el costo, sino el estándar de calidad y cumplimiento legal ofrecido.
+5. Calcule el retorno de inversión (ROI) proyectado a 12 meses.
 
-  // **¿Su empresa quiere conocer su potencial de ahorro real?** Solicite un análisis comparativo gratuito y reciba una cotización ajustada a las necesidades de su empresa en República Dominicana.
-  //     `,
-  //   },
-  //   {
-  //     slug: "normativas-higiene-empresarial-cumplimiento",
-  //     title:
-  //       "Normativas de Higiene Empresarial en República Dominicana: Lo que su Empresa Debe Cumplir",
-  //     excerpt:
-  //       "Una guía completa sobre las leyes dominicanas de higiene y saneamiento que aplican a empresas, oficinas, industrias y clínicas, y cómo garantizar el cumplimiento ante el Ministerio de Trabajo y el Ministerio de Salud Pública sin complicaciones.",
-  //     date: "2026-07-10",
-  //     readTime: "7 min",
-  //     category: "Normativas",
-  //     image: "/imagenes/blog/manos.jpg",
-  //     content: `
+En la mayoría de los casos analizados en empresas dominicanas, el servicio de limpieza tercerizado resulta entre un **15% y un 35% más económico** considerando todos los factores legales y operativos.
+
+---
+
+**¿Su empresa quiere conocer su potencial de ahorro real?** Solicite un análisis comparativo gratuito y reciba una cotización ajustada a las necesidades de su empresa en República Dominicana.
+    `,
+  },
+  //
+
+  // {
+  //   slug: "normativas-higiene-empresarial-cumplimiento",
+  //   title:
+  //     "Normativas de Higiene Empresarial en República Dominicana: Lo que su Empresa Debe Cumplir",
+  //   excerpt:
+  //     "Una guía completa sobre las leyes dominicanas de higiene y saneamiento que aplican a empresas, oficinas, industrias y clínicas, y cómo garantizar el cumplimiento ante el Ministerio de Trabajo y el Ministerio de Salud Pública sin complicaciones.",
+  //   date: "2026-07-10",
+  //   readTime: "7 min",
+  //   category: "Normativas",
+  //   image: "/imagenes/blog/manos.jpg",
+  //   content: `
   // El incumplimiento de las normativas de higiene en República Dominicana puede resultar en multas, cierres temporales, daños reputacionales e incluso responsabilidades legales frente al Ministerio de Trabajo. Conocer qué exigen las leyes dominicanas y cómo cumplirlas es fundamental para cualquier empresa responsable.
 
   // ## Marco normativo dominicano
@@ -173,5 +176,5 @@ Con un servicio de limpieza empresarial tercerizado, usted paga por un resultado
 
   // **¿Necesita que su empresa cumpla con las normativas de higiene vigentes en República Dominicana?** Solicite una evaluación gratuita de sus instalaciones y reciba una propuesta de cumplimiento normativo personalizada.
   //     `,
-  //   },
+  // },
 ];

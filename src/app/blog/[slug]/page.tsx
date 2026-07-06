@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/Breadcrumbs";
 
 const SITE_URL = "https://limpidos.com";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/imagenREDE_OG.jpg`;
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -32,18 +32,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : DEFAULT_OG_IMAGE;
   const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
 
-  const postKeywords = [
-    "limpieza empresarial",
-    "outsourcing limpieza",
-    "empresa de limpieza república dominicana",
-    post.category.toLowerCase(),
-    ...(post.keywords ?? []),
-  ];
-
   return {
     title: post.title,
     description: post.excerpt,
-    keywords: postKeywords,
+
     alternates: { canonical: canonicalUrl },
     robots: {
       index: true,
