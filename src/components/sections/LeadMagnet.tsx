@@ -17,7 +17,7 @@ export default function LeadMagnet() {
     // REEMPLAZA ESTA URL POR LA QUE TE DIO GOOGLE APPS SCRIPT
     // const GOOGLE_SCRIPT_URL = "TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI";
     const GOOGLE_SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbzy-aT9iy6hoBLL0IYWoyYSZYiKtVuV1494op4zl5HWVyd4Iou1K2-rU4TdMVMjU_G3jg/exec";
+      "https://script.google.com/macros/s/AKfycbxR1gGHaAjFsaBBRr4V1ADR8iO-wEAxUwLlozPphMspGomooPKxj6kVi92NrJL46HfV3g/exec";
 
     try {
       const response = await fetch(GOOGLE_SCRIPT_URL, {
