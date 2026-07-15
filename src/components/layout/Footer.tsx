@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { COMPANY } from "@/lib/data";
+// "dev": "next dev",
 
 const FOOTER_LINKS = {
   Servicios: [

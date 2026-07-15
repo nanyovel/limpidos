@@ -29,6 +29,11 @@ export const metadata: Metadata = {
 // hasta que esos servicios existan de verdad en el sitio.
 const FAQ_ITEMS = [
   {
+    question: "¿Quién suministra los productos e insumos de limpieza?",
+    answer:
+      "Por lo general, nuestros clientes proporcionan los productos e insumos de limpieza. Esto les permite mantener el control sobre las marcas que utilizan, gestionar su inventario y adquirir los productos al mejor costo según sus políticas de compra. Nuestro personal está capacitado para trabajar con los productos que su empresa prefiera. Si lo desea, Limpidos también puede suministrar los insumos como parte del servicio, aunque esto incrementará el costo de la cotización.",
+  },
+  {
     question: "¿Cuánto cuesta el servicio de limpieza para empresas?",
     answer:
       "El costo depende del tamaño de sus instalaciones, la frecuencia del servicio (diario, interdiario o semanal) y el tipo de espacio (oficina u hogar). Ofrecemos una tarifa mensual fija y predecible, sin costos ocultos. Solicite una cotización gratuita y le presentaremos una propuesta ajustada a su empresa en un plazo de 24 a 48 horas.",
@@ -36,7 +41,7 @@ const FAQ_ITEMS = [
   {
     question: "¿En qué ciudades de República Dominicana ofrecen el servicio?",
     answer:
-      "Actualmente atendemos empresas en Santo Domingo y Santiago de los Caballeros, con posibilidad de cobertura en zonas cercanas según el volumen del contrato. Si su empresa está en otra provincia, contáctenos para evaluar disponibilidad.",
+      "Actualmente atendemos empresas en Santo Domingo, Santiago de los Caballeros y La Altagracia, con posibilidad de cobertura en zonas cercanas según el volumen del contrato. Si su empresa está en otra provincia, contáctenos para evaluar disponibilidad.",
   },
   {
     question:
@@ -47,7 +52,7 @@ const FAQ_ITEMS = [
   {
     question: "¿Puedo contratar el servicio fuera del horario laboral?",
     answer:
-      "Sí. La mayoría de nuestros clientes corporativos prefieren el servicio en horario nocturno o de fin de semana para no interrumpir la operación diaria. Coordinamos el horario que mejor se ajuste a su empresa.",
+      "Sí. La mayoría algunos clientes corporativos prefieren el servicio en horario nocturno o de fin de semana para no interrumpir la operación diaria. Coordinamos el horario que mejor se ajuste a su empresa.",
   },
   {
     question: "¿Qué pasa si un empleado de limpieza falta o se enferma?",

@@ -4,11 +4,10 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
 // import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { CTASection } from "@/components/sections/CTASection";
-import { SERVICES, SOLUTIONS, STATS } from "@/lib/data";
+import { SERVICES } from "@/lib/data";
 
 // Acortado a ~68 caracteres para reducir riesgo de truncamiento en el SERP
-const Title =
-  "Empresa de Limpieza empresarial: Oficinas, Industrias y hogar en Republica Dominicana";
+const Title = "Limpieza Empresarial en República Dominicana | Limpidos";
 const Description =
   "Empresa de limpieza en República Dominicana especializada en oficinas, industrias y comercios. Servicios de limpieza profesional y outsourcing.";
 
@@ -148,9 +147,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-
       <BenefitsSection />
-
       {/* Why outsource */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

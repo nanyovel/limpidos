@@ -4,8 +4,7 @@ export function WhatsAppButton() {
   const message = encodeURIComponent(
     "Hola, me interesa conocer sus servicios de limpieza. ¿Podrían darme más información?",
   );
-  const phone = COMPANY.phone.replace(/\D/g, "");
-  const href = `https://wa.me/${phone}?text=${message}`;
+  const href = `https://wa.me/${COMPANY.phoneLink}?text=${message}`;
 
   return (
     <a

@@ -6,6 +6,7 @@ import {
   Breadcrumbs,
   buildBreadcrumbJsonLd,
 } from "@/components/ui/Breadcrumbs";
+import LeadMagnet from "@/components/sections/LeadMagnet";
 
 const SITE_URL = "https://limpidos.com";
 
@@ -13,11 +14,6 @@ export const metadata: Metadata = {
   title: "Blog | Recursos sobre Limpieza Empresarial en República Dominicana",
   description:
     "Artículos para directores y gerentes en República Dominicana sobre outsourcing de limpieza, gestión operativa y ahorro de costos empresariales.",
-  keywords: [
-    "blog limpieza empresarial",
-    "outsourcing limpieza república dominicana",
-    "servicio de limpieza para empresas",
-  ],
   alternates: { canonical: `${SITE_URL}/blog` },
 };
 
@@ -155,30 +151,7 @@ export default function BlogPage() {
             ))}
           </div>
 
-          {/* Lead magnet CTA */}
-          <div className="mt-20 bg-brand-50 border border-brand-100 rounded-3xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl font-display font-bold text-brand-900 mb-3">
-              ¿Quiere recibir más contenido como este?
-            </h3>
-            <p className="text-slate-500 mb-6 max-w-xl mx-auto">
-              Suscríbase y reciba guías exclusivas sobre gestión operativa,
-              outsourcing y optimización de costos directamente en su email
-              corporativo.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="su@empresa.com"
-                className="input-field flex-1"
-              />
-              <button className="btn-primary whitespace-nowrap">
-                Suscribirme
-              </button>
-            </div>
-            <p className="text-xs text-slate-400 mt-3">
-              Sin spam. Puede cancelar en cualquier momento.
-            </p>
-          </div>
+          <LeadMagnet />
         </div>
       </section>
     </>

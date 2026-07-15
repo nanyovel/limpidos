@@ -1,5 +1,10 @@
 import type { BlogPost } from "@/types";
 
+// ## Qué evaluar antes de contratar
+
+// ### 1. Experiencia atendiendo empresas
+
+// No es lo mismo limpiar una vivienda que mantener una oficina corporativa, una industria o una clínica. En Limpidos trabajamos exclusivamente con organizaciones que requieren un servicio continuo, organizado y supervisado.
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "beneficios-outsourcing-limpieza-empresarial",
@@ -125,56 +130,74 @@ En la mayoría de los casos analizados en empresas dominicanas, el servicio de l
 **¿Su empresa quiere conocer su potencial de ahorro real?** Solicite un análisis comparativo gratuito y reciba una cotización ajustada a las necesidades de su empresa en República Dominicana.
     `,
   },
-  //
+  {
+    slug: "empresa-limpieza-santo-domingo",
+    title:
+      "Empresas de Limpieza en Santo Domingo y todo el pais: Qué Debe Ofrecer un Proveedor Confiable",
+    excerpt:
+      "Si está buscando empresas de limpieza para su organización, esta guía le explica cómo evaluar un proveedor confiable y qué aspectos revisar antes de contratar.",
+    date: "2026-07-15",
+    readTime: "6 min",
+    category: "Gestión empresarial",
+    image: "/imagenes/blog/manos-aerosol-limpieza.jpg",
 
-  // {
-  //   slug: "normativas-higiene-empresarial-cumplimiento",
-  //   title:
-  //     "Normativas de Higiene Empresarial en República Dominicana: Lo que su Empresa Debe Cumplir",
-  //   excerpt:
-  //     "Una guía completa sobre las leyes dominicanas de higiene y saneamiento que aplican a empresas, oficinas, industrias y clínicas, y cómo garantizar el cumplimiento ante el Ministerio de Trabajo y el Ministerio de Salud Pública sin complicaciones.",
-  //   date: "2026-07-10",
-  //   readTime: "7 min",
-  //   category: "Normativas",
-  //   image: "/imagenes/blog/manos.jpg",
-  //   content: `
-  // El incumplimiento de las normativas de higiene en República Dominicana puede resultar en multas, cierres temporales, daños reputacionales e incluso responsabilidades legales frente al Ministerio de Trabajo. Conocer qué exigen las leyes dominicanas y cómo cumplirlas es fundamental para cualquier empresa responsable.
+    content: `
+Si está buscando una empresa de limpieza para su empresa, probablemente se encuentre comparando varias opciones antes de solicitar una cotización. Esa es una decisión importante: el proveedor que elija impacta directamente la imagen de sus instalaciones, la productividad de sus colaboradores y la continuidad de sus operaciones.
 
-  // ## Marco normativo dominicano
+Muchas empresas cometen el error de comparar únicamente el precio. En la práctica, factores como la supervisión, la continuidad del personal y el cumplimiento legal suelen pesar mucho más a largo plazo. Esta guía le explica qué debe evaluar antes de contratar.
 
-  // Las empresas que operan en República Dominicana están sujetas a diversas regulaciones dependiendo de su sector, tamaño y actividad. En materia de higiene y saneamiento, las principales normativas involucran:
 
-  // - El Código de Trabajo dominicano (Ley 16-92), que exige condiciones de trabajo saludables y seguras.
-  // - La Ley General de Salud (Ley 42-01) y los reglamentos del Ministerio de Salud Pública.
-  // - Reglamentos sectoriales específicos, especialmente en salud, alimentos e industria.
-  // - Normas de seguridad e higiene industrial aplicadas por el Ministerio de Trabajo.
 
-  // ## Qué exigen las inspecciones en República Dominicana
+ [[cta: ¿Buscando un proveedor confiable? | Conozca nuestra cobertura y solicite una propuesta sin costo]]
 
-  // Durante una inspección del Ministerio de Trabajo o del Ministerio de Salud Pública, los auditores verifican:
+## ¿Quién suele encargarse de contratar este servicio?
 
-  // - Frecuencia y registros de limpieza de las instalaciones.
-  // - Disponibilidad de productos de higiene y desinfección.
-  // - Estado de sanitarios, cocinetas y áreas comunes.
-  // - Manejo adecuado de residuos.
-  // - Capacitación del personal en protocolos de higiene.
+Dependiendo del tamaño de la organización, el proceso suele ser liderado por el gerente de Compras, RRHH, Mantenimiento o el departamento de Operaciones. Aunque cambie el responsable, el objetivo es el mismo: encontrar un proveedor estable, profesional y capaz de adaptarse a las necesidades de la empresa.
+## ¿Que evaluar antes de contratar?
+### 1. Cumplimiento legal
 
-  // Este último punto es especialmente relevante para clínicas y centros médicos, que requieren protocolos de limpieza hospitalaria y desinfección certificados. La limpieza y desinfección hospitalaria en República Dominicana está sujeta a un nivel de exigencia superior al de una oficina convencional, dado el riesgo de contaminación cruzada.
+Verifique que el proveedor opere formalmente y cumpla con sus obligaciones laborales. Esto reduce riesgos importantes para su organización.
 
-  // ## Cómo Limpidos le garantiza el cumplimiento
 
-  // Como empresa de servicios de limpieza especializada, nuestros servicios de limpieza para empresas incluyen documentación completa lista para cualquier auditoría en República Dominicana:
+### 2. Cobertura de servicio
 
-  // - Registros de frecuencia de limpieza por área.
-  // - Fichas técnicas de los productos de limpieza utilizados.
-  // - Certificaciones y capacitación continua del personal.
-  // - Protocolos escritos por área, incluyendo limpieza hospitalaria cuando aplica.
+Confirme si el proveedor puede atender todas sus ubicaciones actuales y acompañar el crecimiento futuro de su empresa, sin tener que contratar distintas empresas conforme se expande.
 
-  // Su empresa siempre estará lista para cualquier inspección del Ministerio de Trabajo o del Ministerio de Salud Pública, sin esfuerzo adicional de su parte.
+### 3. Continuidad del servicio
 
-  // ---
+Pregunte qué sucede cuando un colaborador falta por enfermedad, vacaciones o renuncia. En Limpidos contamos con procesos que garantizan la continuidad del servicio sin afectar sus operaciones.
 
-  // **¿Necesita que su empresa cumpla con las normativas de higiene vigentes en República Dominicana?** Solicite una evaluación gratuita de sus instalaciones y reciba una propuesta de cumplimiento normativo personalizada.
-  //     `,
-  // },
+### 4. Supervisión constante
+
+Un buen servicio no depende solo del personal operativo, sino de supervisores que verifiquen calidad, horarios, uso de productos y cumplimiento de protocolos — esto es lo que más diferencia a una empresa profesional de una improvisada.
+### 5. Flexibilidad del contrato
+- Cláusulas de terminación anticipada y penalidades
+- Posibilidad de solicitar cambio de personal si no cumple expectativas
+- Escalabilidad (agregar/quitar conserjes según necesidad)
+
+## ¿Por qué elegir Limpidos?
+
+En Limpidos desarrollamos soluciones adaptadas a oficinas, edificios corporativos, industrias, centros comerciales e instituciones que requieren un servicio de limpieza continuo y confiable. No solo enviamos personal: buscamos ser un aliado estratégico que le permita olvidarse de la gestión diaria del servicio.
+
+
+
+## Preguntas frecuentes
+
+### ¿Conviene contratar personal interno o tercerizar la limpieza?
+
+Cada vez más empresas optan por tercerizar porque les permite concentrarse en su actividad principal y delegar la operación diaria a especialistas.
+
+### ¿Cuanto se ahorra la empresa tercerizando el personal de limpieza?
+
+Normalmente entre un 15 y 35% del costo total por cada empleado de limpieza
+
+---
+
+## ¿Está buscando una empresa de limpieza para su empresa?
+
+Si actualmente está comparando empresas de limpieza en Santo Domingo o en cualquier otra provincia de República Dominicana, conozca todo lo que Limpidos puede ofrecer a su organización.
+
+ [[cta: ¿Buscando un proveedor confiable? | Conozca nuestra cobertura y solicite una propuesta sin costo]]
+`,
+  },
 ];

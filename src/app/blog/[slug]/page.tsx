@@ -8,6 +8,7 @@ import {
   Breadcrumbs,
   buildBreadcrumbJsonLd,
 } from "@/components/ui/Breadcrumbs";
+import { CTAService } from "@/components/sections/CTAService";
 
 const SITE_URL = "https://limpidos.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/imagenREDE_OG.jpg`;
@@ -76,6 +77,45 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * Soporta: encabezados (##), separadores (---), texto en negrita como línea
  * completa (**texto**), listas no ordenadas (- item) y listas ordenadas (1. item).
  */
+function renderInline(text: string) {
+  // Divide por negritas (**texto**) y URLs sueltas, sin perder el resto del texto
+  const parts = text.split(/(\*\*[^*]+\*\*|https?:\/\/[^\s]+)/g);
+
+  return parts.map((part, idx) => {
+    if (!part) return null;
+
+    if (part.startsWith("**") && part.endsWith("**")) {
+      const inner = part.slice(2, -2);
+      // Si dentro de la negrita hay una URL (ej. **https://...**), la volvemos link
+      if (/^https?:\/\//.test(inner)) {
+        return (
+          <a
+            key={idx}
+            href={inner}
+            className="font-semibold text-brand-700 underline hover:text-brand-900"
+          >
+            {inner}
+          </a>
+        );
+      }
+      return <strong key={idx}>{inner}</strong>;
+    }
+
+    if (/^https?:\/\//.test(part)) {
+      return (
+        <a
+          key={idx}
+          href={part}
+          className="text-brand-700 underline hover:text-brand-900"
+        >
+          {part}
+        </a>
+      );
+    }
+
+    return part;
+  });
+}
 function renderMarkdown(content: string) {
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
@@ -89,6 +129,7 @@ function renderMarkdown(content: string) {
       continue;
     }
 
+    // H2
     if (line.startsWith("## ")) {
       elements.push(
         <h2
@@ -102,12 +143,14 @@ function renderMarkdown(content: string) {
       continue;
     }
 
+    // HR
     if (line.startsWith("---")) {
       elements.push(<hr key={i} className="my-8 border-slate-200" />);
       i++;
       continue;
     }
 
+    // P
     if (line.startsWith("**") && line.endsWith("**")) {
       elements.push(
         <p key={i} className="font-semibold text-brand-900 mb-3">
@@ -118,6 +161,7 @@ function renderMarkdown(content: string) {
       continue;
     }
 
+    // UL / LI
     if (line.startsWith("- ")) {
       const items: string[] = [];
       while (i < lines.length && lines[i].trim().startsWith("- ")) {
@@ -138,6 +182,60 @@ function renderMarkdown(content: string) {
       );
       continue;
     }
+    //  H3
+    if (line.startsWith("### ")) {
+      elements.push(
+        <h3
+          key={i}
+          className="text-base font-display font-bold uppercase tracking-wide text-accent-600 mt-8 mb-2"
+        >
+          {line.replace("### ", "")}
+        </h3>,
+      );
+      i++;
+      continue;
+    }
+
+    // blockquote
+    if (line.startsWith("> ")) {
+      const quoteLines: string[] = [];
+      while (i < lines.length && lines[i].trim().startsWith(">")) {
+        // quita el "> " (o ">" solo, para líneas vacías dentro del blockquote)
+        quoteLines.push(lines[i].trim().replace(/^>\s?/, ""));
+        i++;
+      }
+      elements.push(
+        <blockquote
+          key={`bq-${i}`}
+          className="border-l-4 border-accent-500 bg-brand-50 rounded-r-lg pl-5 pr-4 py-4 my-6 text-brand-900"
+        >
+          {quoteLines
+            .filter((l) => l.length > 0)
+            .map((l, idx) => {
+              // Soporta **negrita** dentro del blockquote
+              const parts = l.split(/(\*\*[^*]+\*\*)/g);
+              return (
+                // Anterior
+                // <p key={idx} className="leading-relaxed mb-2 last:mb-0">
+                //   {parts.map((part, pIdx) =>
+                //     part.startsWith("**") && part.endsWith("**") ? (
+                //       <strong key={pIdx}>{part.replace(/\*\*/g, "")}</strong>
+                //     ) : (
+                //       part
+                //     ),
+                //   )}
+                // </p>
+
+                // Recomendado por claude
+                <p key={idx} className="leading-relaxed mb-2 last:mb-0">
+                  {renderInline(l)}
+                </p>
+              );
+            })}
+        </blockquote>,
+      );
+      continue;
+    }
 
     if (/^\d+\.\s/.test(line)) {
       const items: string[] = [];
@@ -152,7 +250,7 @@ function renderMarkdown(content: string) {
         >
           {items.map((item, idx) => (
             <li key={idx} className="leading-relaxed">
-              {item}
+              {renderInline(item)}
             </li>
           ))}
         </ol>,
@@ -160,9 +258,23 @@ function renderMarkdown(content: string) {
       continue;
     }
 
+    // Marca especial: [[cta]] o [[cta: Título personalizado | Descripción personalizada]]
+    if (line.startsWith("[[cta")) {
+      const match = line.match(/^\[\[cta(?::\s*(.+?)\s*\|\s*(.+?))?\]\]$/);
+      elements.push(
+        <CTAService
+          key={`cta-${i}`}
+          title={match?.[1]}
+          description={match?.[2]}
+        />,
+      );
+      i++;
+      continue;
+    }
+
     elements.push(
       <p key={i} className="text-slate-600 leading-relaxed mb-4">
-        {line}
+        {renderInline(line)}
       </p>,
     );
     i++;
@@ -296,7 +408,7 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
 
               {/* Author box */}
-              <div className="mt-12 p-6 bg-brand-50 rounded-2xl border border-brand-100 flex items-center gap-4">
+              {/* <div className="mt-12 p-6 bg-brand-50 rounded-2xl border border-brand-100 flex items-center gap-4">
                 <div className="w-14 h-14 bg-brand-700 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold text-xl">L</span>
                 </div>
@@ -309,7 +421,7 @@ export default async function BlogPostPage({ params }: Props) {
                     de 5 años de experiencia en el sector B2B.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </article>
 
             {/* Sidebar */}

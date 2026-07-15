@@ -27,7 +27,7 @@ const WHAT_INCLUDES = [
       "Pisos, recepción, salas de reunión y pasillos, listos antes de que su equipo llegue a trabajar.",
   },
   {
-    title: "Baños y cocinetas desinfectados",
+    title: "Baños y cocinas desinfectados",
     description:
       "Reposición de insumos (papel, jabón, desinfectante) incluida en cada visita.",
   },

@@ -9,7 +9,8 @@ export const COMPANY = {
   phoneLink: "18493419890",
   email: "ventas@limpidos.com",
   address:
-    "Av. Sarasota esquina Av. Enrique Jimenez Moya, Plaza Universitaria, ala Oeste, Segundo Nivel, Santo Domingo, RD",
+    // "Av. Sarasota esquina Av. Enrique Jimenez Moya, Plaza Universitaria, ala Oeste, Segundo Nivel, Santo Domingo, RD",
+    "Av. Sarasota esquina Av. Enrique Jimenez Moya, La Julia, Plaza Universitaria, ala Oeste, Segundo Nivel, Santo Domingo",
   social: {
     linkedin: "https://www.linkedin.com/company/limpidos/",
     instagram: "https://www.instagram.com/limpidossrl/",

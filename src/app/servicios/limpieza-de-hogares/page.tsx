@@ -8,10 +8,10 @@ import {
 import { FaqAccordion } from "@/components/FaqAccordion";
 
 const SITE_URL = "https://limpidos.com";
-const PAGE_URL = `${SITE_URL}/servicios/limpieza-de-hogar`;
+const PAGE_URL = `${SITE_URL}/servicios/limpieza-de-hogares`;
 
 export const metadata: Metadata = {
-  title: "Empresa de Limpieza de Hogar en Higüey, Bávaro y Punta Cana",
+  title: "Empresa de Limpieza en Higüey, Bávaro y Punta Cana",
   description:
     "Servicio de limpieza de casas a domicilio en La Altagracia. Limpieza general de hogar, lavado de alfombras, colchones y limpieza de piscinas en Higüey, Bávaro y Punta Cana.",
   keywords: [
@@ -232,15 +232,15 @@ export default function LimpiezaDeHogarPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} variant="light" />
           <span className="inline-block bg-accent-500/20 text-accent-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
-            Empresa de limpieza de hogar
+            Empresa de limpieza
           </span>
           <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
-            Limpieza de hogar en Higüey, Bávaro y Punta Cana
+            Limpieza en Higüey, Bávaro y Punta Cana
           </h1>
           <p className="text-xl text-brand-200 leading-relaxed mb-8 max-w-2xl">
-            Servicio de limpieza de casas a domicilio en la provincia La
-            Altagracia, con opción de lavado de alfombras, colchones y limpieza
-            de piscinas.
+            Servicio de limpieza de casas u empresas a domicilio en la provincia
+            La Altagracia, con opción de lavado de alfombras, colchones y
+            limpieza de piscinas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contacto" className="btn-white">

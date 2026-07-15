@@ -25,7 +25,7 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Limpieza empresarial en República Dominicana
+              Empresa de Limpieza empresarial en República Dominicana
             </h1>
 
             <p className="text-xl text-brand-200 leading-relaxed mb-8 max-w-xl">
