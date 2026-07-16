@@ -207,7 +207,7 @@ Si actualmente está comparando empresas de limpieza en Santo Domingo o en cualq
       "Supervisar Conserjes le Roba Tiempo y le Carga de Responsabilidad a la Gerente de RRHH",
     excerpt:
       "Supervisar al personal de limpieza consume tiempo de gerencia que nadie factura, sin garantizar calidad ni consistencia. Descubra por qué la supervisión es el punto de dolor más subestimado de tener personal interno.",
-    date: "2026-07-17",
+    date: "2026-07-16",
     readTime: "6 min",
     category: "Gestión Empresarial",
     image: "/imagenes/blog/limpieza-Escritorio.jpg",
