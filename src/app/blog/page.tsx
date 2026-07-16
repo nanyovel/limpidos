@@ -39,7 +39,9 @@ const categoryColors: Record<string, string> = {
   Normativas: "bg-amber-100 text-amber-700",
   Hogar: "bg-sky-100 text-sky-700",
 };
-
+const sortedPosts = [...BLOG_POSTS].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
 export default function BlogPage() {
   const breadcrumbItems = [{ label: "Inicio", href: "/" }, { label: "Blog" }];
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(breadcrumbItems, SITE_URL);
@@ -88,7 +90,7 @@ export default function BlogPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {BLOG_POSTS.map((post, index) => (
+            {sortedPosts.map((post, index) => (
               <article
                 key={post.slug}
                 className={`group rounded-2xl overflow-hidden border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col ${

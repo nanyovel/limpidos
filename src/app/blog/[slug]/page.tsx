@@ -129,6 +129,22 @@ function renderMarkdown(content: string) {
       continue;
     }
 
+    if (line.startsWith("[[h2b:")) {
+      const match = line.match(/^\[\[h2b:\s*(.+?)\]\]$/);
+      if (match) {
+        elements.push(
+          <h2
+            key={i}
+            className="text-2xl font-display font-bold text-accent-600 mt-10 mb-4"
+          >
+            {match[1]}
+          </h2>,
+        );
+        i++;
+        continue;
+      }
+    }
+
     // H2
     if (line.startsWith("## ")) {
       elements.push(

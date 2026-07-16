@@ -138,7 +138,7 @@ En la mayoría de los casos analizados en empresas dominicanas, el servicio de l
       "Si está buscando empresas de limpieza para su organización, esta guía le explica cómo evaluar un proveedor confiable y qué aspectos revisar antes de contratar.",
     date: "2026-07-15",
     readTime: "6 min",
-    category: "Gestión empresarial",
+    category: "Gestión Empresarial",
     image: "/imagenes/blog/manos-aerosol-limpieza.jpg",
 
     content: `
@@ -199,5 +199,84 @@ Si actualmente está comparando empresas de limpieza en Santo Domingo o en cualq
 
  [[cta: ¿Buscando un proveedor confiable? | Conozca nuestra cobertura y solicite una propuesta sin costo]]
 `,
+  },
+
+  {
+    slug: "supervision-personal-limpieza-interno",
+    title:
+      "Supervisar Conserjes le Roba Tiempo y le Carga de Responsabilidad a la Gerente de RRHH",
+    excerpt:
+      "Supervisar al personal de limpieza consume tiempo de gerencia que nadie factura, sin garantizar calidad ni consistencia. Descubra por qué la supervisión es el punto de dolor más subestimado de tener personal interno.",
+    date: "2026-07-17",
+    readTime: "6 min",
+    category: "Gestión Empresarial",
+    image: "/imagenes/blog/limpieza-Escritorio.jpg",
+
+    content: `
+Cuando una empresa evalúa el costo de tener personal de limpieza interno, casi siempre calcula salario, prestaciones y AFP. Lo que rara vez se calcula es quién supervisa a ese personal, y cuánto cuesta realmente esa supervisión.
+
+En la práctica, la supervisión termina recayendo de forma informal en alguien que no fue contratado para eso: un gerente de oficina, un encargado de RRHH o incluso el dueño de la empresa. Es un costo invisible, pero real, y suele ser el punto de dolor menos discutido y más caro de gestionar personal de limpieza por cuenta propia.
+
+
+## 1. Tiempo de gerencia que nadie factura
+
+Revisar si se limpiaron los baños, si se pasó la aspiradora o si se repuso el papel higiénico es una tarea que no debería estar en la agenda de un gerente de RRHH, pero termina ahí de todas formas. Cada vez que su atención se desvía hacia esto, se aleja de lo que realmente debería estar gestionando: personas, procesos, cultura organizacional.
+Y como es una tarea que compite con prioridades más urgentes, casi siempre queda relegada. El resultado son descuidos que nadie nota a tiempo: papel higiénico agotado, jabón de manos sin reponer, un baño que lleva horas sin revisión. Es justo el tipo de detalle que un cliente o visitante sí percibe, aunque el gerente responsable de "supervisarlo" ni se entere.
+Ese tiempo no aparece en ningún reporte de costos, pero se resta directamente de la productividad de la persona que debería estar haciendo otra cosa.
+
+## 2. Documentar, Amonestar, Desvincular: Tareas que su Gerente de RRHH no Debería Tener que Hacer por un Conserje
+
+Cuando surge una queja sobre el desempeño del personal de limpieza, alguien tiene que dar seguimiento, hablar con el empleado, documentar la situación y, en algunos casos, iniciar un proceso disciplinario o de desvinculación. Todo esto recae, una vez más, sobre alguien que normalmente no tiene ni el tiempo ni la formación en gestión de personal operativo para manejarlo de forma eficiente.
+
+## 3. Gestion conflictos interpersonales
+
+Además del desempeño, están los conflictos interpersonales propios de cualquier equipo operativo: roces entre compañeros, malentendidos, quejas cruzadas. Gestionar ese tipo de dinámica no es parte de la descripción de puesto de un gerente de RRHH, pero termina absorbiendo su tiempo de todas formas, como mediador de un conflicto.
+Con Limpidos, su empresa no se involucra en nada de esto. Si el desempeño o la actitud de un conserje no cumple con lo esperado, simplemente se solicita el cambio y nosotros lo gestionamos de forma breve, sin que su gerente de RRHH tenga que mediar, documentar o dar seguimiento a un conflicto que no es suyo.
+
+## 4. Nadie en la empresa tiene el expertise para evaluar calidad
+
+Un gerente de ventas, de RRHH o de Compras no tiene por qué saber cuál es el protocolo correcto para desinfectar una cocina de oficina, un área de baños compartidos o una superficie de alto contacto. Sin ese conocimiento técnico, la supervisión se convierte en una evaluación "a ojo": se ve limpio o no se ve limpio, sin un estándar real detrás.
+
+Esto significa que, aunque alguien esté supervisando, no necesariamente está evaluando lo que realmente importa desde el punto de vista de higiene y salubridad.
+
+## 5. Sin checklist, no hay forma de medir consistencia
+
+Sin un sistema de indicadores, la evaluación de calidad depende del estado de ánimo o la atención del día de quien supervisa. Si el personal de limpieza cumple bien un día y mal al siguiente, no hay una forma estructurada de detectarlo, documentarlo o corregirlo a tiempo. El problema solo se hace visible cuando ya generó una queja de un cliente, visitante o colaborador.
+
+## 6. El "quién vigila al vigilante"
+
+Cuando se asigna informalmente a alguien como responsable de supervisar al personal de limpieza, esa persona adquiere una responsabilidad adicional que no está en su descripción de puesto ni en su compensación. Con el tiempo, esto genera fricción: la persona siente que está haciendo un trabajo que no le corresponde, y termina delegándolo de nuevo o dejando de hacerlo por completo.
+
+## 7. La supervisión informal no escala
+
+Con un solo empleado de limpieza, este modelo de supervisión "a ojo" puede parecer manejable. Pero en cuanto la empresa crece, abre una segunda sede o amplía su equipo de limpieza, la supervisión informal se vuelve insostenible. Llega un punto en el que la única solución dentro del modelo interno es contratar a alguien exclusivamente para supervisar, lo que añade otro salario, otras prestaciones y otro puesto que administrar.
+
+[[h2b: Lo que cambia con una supervisión profesional y externa]]
+
+Una empresa de limpieza especializada como Limpidos no solo envía personal, envía también su propio sistema de supervisión:
+
+- Supervisores de campo que verifican calidad, horarios y cumplimiento de protocolos de forma periódica.
+- Checklists y estándares definidos, no evaluación subjetiva.
+- Ponemos a disposición de nuestros clientes una app de seguimiento con un programa semanal y un checklist diario: cada vez que la conserje completa una actividad, sube evidencia (fotos y videos) y la marca como finalizada, con acceso tanto para la empresa como para nuestro equipo de supervisión. Esa gestión es diaria, no ocasional.
+- Gestión directa de cualquier situación de desempeño con el personal, sin involucrar al cliente.
+- Un solo punto de contacto para reportar cualquier inquietud, sin necesidad de gestionar al personal operativo directamente.
+
+En este modelo, su empresa deja de invertir tiempo de gerencia en supervisar limpieza y recibe, en cambio, un servicio ya supervisado, con estándares de calidad verificables.
+
+## Preguntas frecuentes
+
+### ¿Quién supervisa al personal de limpieza si contrato un servicio tercerizado?
+
+La empresa proveedora asigna supervisores de campo propios que verifican la calidad del servicio, sin que su empresa tenga que asumir esa función.
+
+### ¿Cómo se garantiza la calidad sin que mi empresa supervise directamente?
+
+A través de checklists de calidad, visitas de supervisión periódicas, la app de seguimiento donde cada actividad completada queda registrada con evidencia fotográfica o en video, y un canal directo para reportar cualquier inconformidad, que el proveedor resuelve sin involucrar al personal interno del cliente.
+---
+
+**¿Su empresa está invirtiendo tiempo de gerencia en supervisar limpieza?** Solicite una propuesta gratuita y descubra cómo delegar por completo esa supervisión sin perder control sobre la calidad del servicio.
+
+[[cta: ¿Buscando un proveedor confiable? | Conozca nuestra cobertura y solicite una propuesta sin costo]]
+  `,
   },
 ];

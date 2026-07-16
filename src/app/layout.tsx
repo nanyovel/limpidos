@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import {
+  DM_Sans,
+  DM_Serif_Display,
+  Manrope,
+  Sora,
+  Plus_Jakarta_Sans,
+} from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -21,7 +27,24 @@ const dmSerif = DM_Serif_Display({
   display: "swap",
   weight: "400",
 });
-
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["600", "700", "800"],
+});
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["600", "700", "800"],
+});
+const plus_jakarta_sans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["600", "700", "800"],
+});
 export const metadata: Metadata = {
   metadataBase: new URL("https://limpidos.com"),
   title: {
@@ -173,7 +196,14 @@ export default function RootLayout({
     ],
   };
   return (
-    <html lang="es" className={`${dmSans.variable} ${dmSerif.variable}`}>
+    // <html lang="es" className={`${dmSans.variable} ${dmSerif.variable}`}>
+    // <html lang="es" className={`${dmSans.variable} ${manrope.variable} `}>
+    // <html lang="es" className={`${dmSans.variable}  ${sora.variable}`}>
+
+    <html
+      lang="es"
+      className={`${dmSans.variable} ${plus_jakarta_sans.variable}`}
+    >
       <head>
         <script
           type="application/ld+json"
