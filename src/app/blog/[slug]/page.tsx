@@ -316,10 +316,18 @@ export default async function BlogPostPage({ params }: Props) {
   const otherPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 2);
   const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
 
+  // const breadcrumbItems = [
+  //   { label: "Inicio", href: "/" },
+  //   { label: "Blog", href: "/blog" },
+  //   { label: post.title },
+  // ];
+  const shortTitle =
+    post.title.length > 30 ? `${post.title.slice(0, 30)}...` : post.title;
+
   const breadcrumbItems = [
     { label: "Inicio", href: "/" },
     { label: "Blog", href: "/blog" },
-    { label: post.title },
+    { label: shortTitle },
   ];
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(breadcrumbItems, SITE_URL);
 
@@ -355,8 +363,11 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Hero */}
       <section className="gradient-brand pt-32 pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={breadcrumbItems} variant="light" />
-          <div className="mb-4">
+          {/* <Breadcrumbs items={breadcrumbItems} variant="light" /> */}
+          <div className="hidden sm:block">
+            <Breadcrumbs items={breadcrumbItems} variant="light" />
+          </div>
+          {/* <div className="mb-4">
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-brand-300 hover:text-white text-sm transition-colors"
@@ -376,19 +387,53 @@ export default async function BlogPostPage({ params }: Props) {
               </svg>
               Volver al blog
             </Link>
-          </div>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">
+          </div> */}
+
+          {/* <div class
+          
+          Name="flex items-center gap-2 mb-4">
+      
+
+            <span className="hidden sm:inline-flex bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">
               {post.category}
             </span>
-            <span className="text-brand-300 text-sm">
+
+            <span className="text-brand-400 text-xs">·</span>
+            <span className="text-brand-300 text-xs">
               {formatDate(post.date)}
             </span>
-            <span className="text-brand-400 text-sm">·</span>
-            <span className="text-brand-300 text-sm">
-              {post.readTime} de lectura
+          </div> */}
+
+          <div className="flex items-center gap-3 mb-4 flex-wrap">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-brand-300 hover:text-white text-sm transition-colors"
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+              Volver al blog
+            </Link>
+            <span className="text-brand-400 text-xs">·</span>
+            <span className="text-brand-300 text-xs">
+              {formatDate(post.date)}
+            </span>
+            <span className="hidden sm:inline text-brand-400 text-xs">·</span>
+            <span className="hidden sm:inline text-accent-300 text-xs font-semibold uppercase tracking-wide">
+              {post.category}
             </span>
           </div>
+
           <h1 className="text-3xl sm:text-4xl font-display font-bold text-white leading-tight">
             {post.title}
           </h1>

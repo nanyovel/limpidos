@@ -98,12 +98,36 @@ export default function BlogPage() {
                   index === 0 ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                <div className="h-48 relative overflow-hidden bg-brand-50">
+                {/* <div className="h-48 relative overflow-hidden bg-brand-50">
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+
+                  <div className="absolute top-4 left-4">
+                    <span
+                      className={`text-xs font-semibold px-3 py-1.5 rounded-full ${
+                        categoryColors[post.category] ||
+                        "bg-white/90 text-slate-700"
+                      }`}
+                    >
+                      {post.category}
+                    </span>
+                  </div>
+                </div> */}
+
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="h-48 relative overflow-hidden bg-brand-50 block"
+                >
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute top-4 left-4">
@@ -116,7 +140,7 @@ export default function BlogPage() {
                       {post.category}
                     </span>
                   </div>
-                </div>
+                </Link>
 
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 text-xs text-slate-400 mb-3">
