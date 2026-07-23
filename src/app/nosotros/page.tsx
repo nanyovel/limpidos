@@ -115,7 +115,7 @@ export default function NosotrosPage() {
               <p className="text-xl text-brand-200 leading-relaxed mb-8">
                 Limpidos nace con una misión clara: liberar a las empresas de la
                 carga operativa de la limpieza interna. Somos una empresa
-                especializada en servicios B2B, enfocada exclusivamente en
+                enfocada principalmente en servicios B2B, especializada en
                 atender negocios que buscan mantener sus espacios en óptimas
                 condiciones.
               </p>

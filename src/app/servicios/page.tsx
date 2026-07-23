@@ -124,8 +124,8 @@ export default function ServiciosPage() {
           </span>
           {/* H1 alineado con lo que realmente se entrega debajo: Oficinas y Hogar */}
           <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
-            Servicios de limpieza para oficinas y hogares en República
-            Dominicana.
+            Servicios de limpieza para oficinas en Santo Domingo, Santiago, La
+            Altagracia y todo el pais.
           </h1>
           <p className="text-xl text-brand-200 max-w-2xl mx-auto mb-10">
             Desde el mantenimiento diario de oficinas corporativas hasta la

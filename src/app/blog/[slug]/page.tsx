@@ -489,7 +489,7 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Sidebar */}
             <aside className="space-y-8">
               {/* CTA Box */}
-              <div className="gradient-brand rounded-2xl p-6 text-white sticky top-24">
+              <div className="hidden lg:block gradient-brand rounded-2xl p-6 text-white sticky top-24">
                 <h3 className="font-display font-bold text-lg mb-2">
                   ¿Le interesa este tema?
                 </h3>
