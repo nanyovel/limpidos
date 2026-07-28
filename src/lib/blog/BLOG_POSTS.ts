@@ -366,4 +366,80 @@ En general, cualquier actividad que constituya la ventaja competitiva central de
 [[cta: ¿Listo para aplicar esta estrategia en su empresa? | Conozca nuestra cobertura y solicite una propuesta sin costo]]
   `,
   },
+  {
+    slug: "la-demanda-laboral-que-rrhh-nunca-ve-venir",
+    title: "La Demanda Laboral que RRHH Nunca ve venir",
+    excerpt:
+      "Cada conserje contratado directamente es una relación laboral más que su departamento de RRHH debe gestionar bajo el Código de Trabajo dominicano: demandas, desahucios, prestaciones. Descubra cómo tercerizar traslada ese riesgo a la empresa de limpieza.",
+    date: "2026-07-28",
+    readTime: "7 min",
+    category: "Gestión Empresarial",
+    image: "/imagenes/blog/surprise-woman.jpg",
+    content: `## El riesgo que su departamento de RRHH asume con personal interno
+
+Cuando el personal de limpieza es contratado directamente por la empresa, RRHH asume las mismas responsabilidades laborales que con cualquier otro empleado, pero con un agravante: suele tratarse de un puesto con alta rotación y, en muchos casos, con una gestión administrativa menos estandarizada que la de otras posiciones.
+
+Entre los riesgos más comunes:
+
+- **Desahucios y despidos mal documentados.** Si el proceso de desvinculación no cumple con lo establecido en el Código de Trabajo, la empresa puede enfrentar reclamaciones o procesos laborales.
+- **Cálculo incorrecto de prestaciones.** Cesantía, preaviso, vacaciones no disfrutadas y regalía pascual deben calcularse correctamente; cualquier error puede dar lugar a reclamaciones ante las autoridades competentes.
+- **Incumplimientos ante la TSS.** Retrasos o errores en los aportes a la AFP y la ARS pueden generar sanciones y obligaciones para el empleador.
+- **Responsabilidad derivada de accidentes laborales.** Un accidente durante las labores de limpieza puede implicar responsabilidades y gestiones adicionales para la empresa empleadora.
+- **Conflictos laborales que escalan a instancias legales.** Una situación mal gestionada con un empleado de limpieza puede convertirse en un proceso laboral que demande tiempo, recursos y atención por parte de RRHH.
+
+Ninguno de estos riesgos es exclusivo del personal de limpieza, pero suelen presentarse con mayor frecuencia debido a la naturaleza operativa del puesto, su alta rotación y la necesidad de una gestión constante.
+
+## Situaciones que RRHH enfrenta con frecuencia
+
+Más allá de las obligaciones legales, existen situaciones cotidianas que consumen tiempo y recursos del departamento de Recursos Humanos cuando el personal de limpieza es contratado directamente. Entre ellas:
+
+- Investigar conflictos entre colaboradores o atender quejas relacionadas con el ambiente laboral.
+- Documentar llamados de atención, amonestaciones y procesos disciplinarios por ausencias, bajo desempeño o incumplimiento de normas.
+- Gestionar reclamaciones por prestaciones laborales, vacaciones, regalía pascual o diferencias salariales.
+- Dar seguimiento a accidentes ocurridos durante la jornada de trabajo y coordinar las gestiones administrativas correspondientes.
+- Administrar reemplazos por vacaciones, licencias médicas o renuncias inesperadas para evitar interrupciones en la operación.
+
+Estas situaciones no son exclusivas del personal de limpieza, pero sí son frecuentes en posiciones operativas con alta rotación. Cada una requiere tiempo, documentación y seguimiento por parte de RRHH, tiempo que podría destinarse a actividades estratégicas para el crecimiento de la organización.
+
+## Qué cambia cuando la relación laboral es con la empresa de conserjería
+
+Al contratar una empresa de limpieza formalmente constituida para prestar el servicio, la relación laboral con el personal asignado corresponde, en principio, al proveedor. Esto puede traducirse en una menor carga administrativa y una reducción significativa de la exposición a determinados riesgos laborales para la empresa cliente, siempre que el servicio esté correctamente estructurado y respaldado por un contrato adecuado.
+
+### 1. La relación laboral corresponde a la empresa de conserjería
+
+El personal asignado es empleado de la empresa proveedora y no de la empresa cliente. En consecuencia, la administración de contratos, nómina, prestaciones y procesos de desvinculación corresponde al proveedor, de acuerdo con la legislación aplicable y los términos del contrato de servicios.
+
+### 2. Menor exposición a conflictos laborales y contingencias
+
+Si surge un conflicto relacionado con el personal asignado, la empresa proveedora es quien normalmente gestiona la relación laboral con sus empleados. Cuando la tercerización está correctamente implementada y documentada, la empresa cliente reduce significativamente su exposición a este tipo de situaciones y evita dedicar recursos internos a la gestión diaria de conflictos laborales, procesos disciplinarios o reemplazos del personal asignado.
+
+### 3. Las obligaciones patronales corresponden al proveedor
+
+La afiliación a la TSS, los aportes a la AFP y la ARS, el pago de prestaciones y el cumplimiento de las obligaciones laborales relacionadas con el personal asignado corresponden al empleador directo, es decir, a la empresa de limpieza. Esto permite que el departamento de RRHH de la empresa cliente reduzca la carga administrativa asociada a ese personal.
+
+## La verificación que RRHH no debe pasar por alto
+
+No todas las empresas de limpieza ofrecen el mismo nivel de formalidad y respaldo. Antes de contratar un proveedor, conviene verificar aspectos como:
+
+1. **¿La empresa está formalmente constituida y registrada?** Solicite el Registro Mercantil y el RNC.
+2. **¿El personal está debidamente afiliado a la TSS?** Solicite evidencia de que los colaboradores asignados cuentan con sus aportes correspondientes a la AFP y la ARS.
+3. **¿Cómo se gestionan los accidentes laborales?** Revise que el contrato establezca claramente las responsabilidades de cada parte.
+4. **¿El contrato define claramente la relación entre las partes?** Un contrato bien redactado debe establecer las responsabilidades del proveedor y delimitar adecuadamente la prestación del servicio.
+
+Contratar una empresa de limpieza informal o que no cumple con sus obligaciones puede generar riesgos innecesarios y disminuir los beneficios que ofrece la tercerización.
+
+## Preguntas frecuentes
+
+### ¿Mi empresa puede ser demandada por un empleado de limpieza si el servicio está tercerizado?
+
+Cuando la tercerización está correctamente estructurada y la relación laboral corresponde al proveedor del servicio, la empresa cliente reduce significativamente su exposición a reclamaciones laborales relacionadas con ese personal. No obstante, cada caso depende de sus circunstancias particulares y de la forma en que se haya implementado la contratación.
+
+### ¿Cómo verifico que una empresa de limpieza cumple con sus obligaciones legales?
+
+Solicite el Registro Mercantil, el RNC, evidencia de la afiliación y los aportes a la TSS del personal asignado, y revise que el contrato de servicios establezca claramente las responsabilidades de cada parte.
+
+### ¿Qué pasa si el personal de limpieza tercerizado sufre un accidente en mis instalaciones?
+
+En términos generales, las responsabilidades laborales corresponden al empleador directo, es decir, a la empresa de limpieza. Sin embargo, la distribución de responsabilidades dependerá de las circunstancias del caso y de lo establecido en el contrato de servicios.`,
+  },
 ];

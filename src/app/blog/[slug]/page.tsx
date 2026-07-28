@@ -191,7 +191,9 @@ function renderMarkdown(content: string) {
         >
           {items.map((item, idx) => (
             <li key={idx} className="leading-relaxed">
-              {item}
+              {/* {item} */}
+
+              {renderInline(item)}
             </li>
           ))}
         </ul>,
