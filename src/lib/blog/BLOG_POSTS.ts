@@ -442,4 +442,102 @@ Solicite el Registro Mercantil, el RNC, evidencia de la afiliación y los aporte
 
 En términos generales, las responsabilidades laborales corresponden al empleador directo, es decir, a la empresa de limpieza. Sin embargo, la distribución de responsabilidades dependerá de las circunstancias del caso y de lo establecido en el contrato de servicios.`,
   },
+  {
+    slug: "limpieza-post-construccion-oficinas",
+    title:
+      "Limpieza Post Construcción de Oficinas: Guía para Empresas en República Dominicana",
+    excerpt:
+      "Terminar una obra o remodelación es solo la mitad del trabajo: sin una limpieza final de obra profesional, su oficina no está lista para operar. Descubra el proceso, cómo se calcula el precio por m2, qué debe exigir a su empresa de limpieza final de obra, y cómo elegir entre las empresas de limpieza de oficinas disponibles en el país.",
+    date: "2026-08-08",
+    readTime: "8 min",
+    category: "Limpieza Especializada",
+    image: "/imagenes/blog/limpieza de obra.jpg",
+    content: `
+Cuando termina una construcción o remodelación de oficinas, la obra se ve concluida pero el espacio todavía no está listo para recibir colaboradores ni clientes. Queda polvo fino incrustado en cada superficie, residuos de pintura, pegamento, silicón, y una capa de suciedad de obra que ningún servicio de limpieza regular está preparado para remover. A eso se le llama limpieza post construcción —también conocida como limpieza final de obra, limpieza post obra o limpieza después de obra— y es un servicio completamente distinto —en técnica, equipo y tiempo— al mantenimiento diario de una oficina.
+
+Para gerentes de Operaciones, Mantenimiento o Facilities que están cerrando un proyecto de construcción o remodelación, saber qué exigir en esta etapa evita retrasos en la apertura y protege la inversión que se acaba de hacer en el espacio.
+
+[[cta: ¿Su oficina está por terminar una obra o remodelación? | Conozca nuestra cobertura y solicite una propuesta sin costo]]
+
+## ¿Por qué la limpieza de obra no es igual a la limpieza regular?
+
+Un equipo de limpieza convencional no tiene el equipo, los productos ni la técnica para remover residuos de obras de construcción sin dañar acabados nuevos. Entre las diferencias principales:
+
+- **Volumen de polvo fino:** el polvo de construcción se filtra en rejillas de aire acondicionado, ductos, marcos de ventanas y equipos electrónicos, no solo en pisos y superficies visibles.
+- **Residuos adheridos:** manchas de pintura, cinta adhesiva, silicón, etiquetas de protección en vidrios y pisos requieren productos y técnicas específicas para no rayar ni decolorar los acabados recién instalados.
+- **Riesgo de daño a acabados nuevos:** un producto o método equivocado sobre un piso, mueble o superficie recién instalada puede generar un costo de reparación mayor al de la limpieza misma.
+- **Zonas de difícil acceso:** luminarias, ductos de aire, detrás de mobiliario fijo y áreas altas que normalmente no forman parte de una limpieza de mantenimiento.
+
+## Las tres etapas de una limpieza final de obra bien hecha
+
+### 1. Limpieza gruesa (rough clean)
+
+Retiro de escombros menores, embalajes, etiquetas de protección, exceso de polvo y desechos de obra. Es la primera pasada, enfocada en dejar el espacio manejable para las siguientes etapas.
+
+### 2. Limpieza fina (final clean)
+
+Aquí se trabaja superficie por superficie: pisos, paredes, marcos, vidrios, mobiliario, rejillas de aire acondicionado, interruptores, tomacorrientes y baños. Es la etapa más extensa y la que determina si el espacio realmente queda listo para operar.
+
+### 3. Limpieza de detalle (touch-up clean)
+
+Una revisión final, normalmente días después de que el espacio empieza a usarse, para remover el polvo residual que sigue asentándose tras la limpieza fina. Muchas empresas de limpieza omiten esta etapa, pero es la que evita que la oficina se vea "recién construida" en su primera semana de uso.
+
+## ¿Cómo se calcula el precio m2 de limpieza de obra?
+
+No existe una tarifa fija por m2 aplicable a cualquier proyecto: el precio de la limpieza de obra varía según varios factores, y cualquier empresa seria debe evaluar el espacio antes de cotizar. Los factores que más influyen en el costo son:
+
+- **Cantidad de residuos de obra:** un espacio con exceso de escombros, pintura o polvo acumulado requiere más horas de trabajo que uno entregado relativamente limpio por la constructora.
+- **Tipo de acabados:** pisos de porcelanato, vidrios de piso a techo o superficies metálicas requieren productos y técnicas distintas —y a veces más tiempo— que acabados estándar.
+- **Etapas incluidas:** una cotización que cubre solo la limpieza gruesa cuesta menos que una que incluye las tres etapas completas (gruesa, fina y de detalle).
+- **Accesibilidad y altura del espacio:** techos altos, ductos o áreas de difícil acceso incrementan el tiempo y, en algunos casos, requieren equipo adicional.
+- **Urgencia del proyecto:** si la limpieza debe completarse en un plazo muy corto para cumplir una fecha de apertura, esto puede afectar el costo.
+
+Por eso, más que buscar un precio m2 genérico, lo más confiable es solicitar una visita o levantamiento del espacio para recibir una cotización ajustada al proyecto real.
+
+## Qué debe exigir a su empresa de limpieza final de obra antes de contratar
+
+- Que el equipo esté capacitado específicamente en limpieza de obra, no solo en mantenimiento regular.
+- Uso de productos y técnicas adecuadas para cada tipo de acabado (piso, vidrio, superficies metálicas, mobiliario).
+- Un checklist por zona, no una limpieza general "a ojo".
+- Cobertura de las tres etapas descritas arriba, no solo la limpieza gruesa.
+- Evidencia fotográfica del antes y después por área.
+
+## De la limpieza post obra al mantenimiento continuo
+
+Una vez que la oficina queda lista, surge la siguiente pregunta natural: ¿quién se encarga de mantenerla así? Es en este punto donde muchas empresas empiezan a comparar empresas de limpieza de oficinas para un servicio recurrente, en lugar de gestionar personal de limpieza interno desde cero.
+
+Algunos puntos que suelen definir esta decisión:
+
+- **Horario del servicio:** la mayoría de las oficinas prefiere limpieza de oficinas de noche, después del cierre de operaciones, para no interrumpir la jornada laboral ni la atención a clientes.
+- **Cobertura geográfica:** si su empresa tiene más de una sede, conviene evaluar compañías de limpieza de oficinas con capacidad de atender todas sus ubicaciones bajo el mismo estándar.
+- **Formalidad y respaldo legal:** no todas las empresas dedicadas a la limpieza de oficinas están debidamente constituidas ni cumplen con sus obligaciones laborales; esto es clave para reducir riesgo legal frente al Código de Trabajo dominicano.
+- **Supervisión:** un servicio de limpieza para oficinas serio incluye supervisión periódica y checklists de calidad, no solo el envío de personal.
+
+Si su empresa está buscando "compañías de limpieza de oficinas" para dar seguimiento al proyecto una vez entregado el espacio, en Limpidos ofrecemos ambos servicios de forma integrada: limpieza final de obra para dejar la oficina lista, y limpieza de mantenimiento continuo para conservarla así, con el mismo estándar de supervisión.
+
+## Preguntas frecuentes
+
+### ¿Cuánto tiempo toma una limpieza post construcción de oficina?
+
+Depende del tamaño del espacio y del alcance de la obra, pero en oficinas de tamaño estándar suele tomar entre 1 y 3 días para cubrir las tres etapas del proceso.
+
+### ¿Cuál es el precio m2 de limpieza de obra?
+
+No hay una tarifa única: el costo por m2 depende de la cantidad de residuos, el tipo de acabados, la accesibilidad del espacio y las etapas incluidas en el servicio. Lo recomendable es solicitar un levantamiento del espacio para recibir una cotización ajustada al proyecto.
+
+### ¿La limpieza post construcción incluye ductos de aire acondicionado?
+
+Debe incluir al menos la limpieza de rejillas y salidas de aire visibles, ya que acumulan una cantidad significativa de polvo fino de obra. La limpieza profunda de ductos internos suele ser un servicio aparte.
+
+### ¿Puedo contratar solo la limpieza post obra sin un contrato de mantenimiento?
+
+Sí, es un servicio independiente. Muchas empresas lo contratan puntualmente al cerrar una obra y luego evalúan por separado si quieren un servicio de limpieza de oficinas recurrente.
+
+---
+
+**¿Su oficina está por terminar una construcción o remodelación?** Solicite una cotización gratuita para la limpieza final de obra y conozca también nuestras opciones de mantenimiento continuo, incluyendo limpieza de oficinas de noche.
+
+[[cta: ¿Listo para dejar su oficina lista para operar? | Conozca nuestra cobertura y solicite una propuesta sin costo]]
+    `,
+  },
 ];
