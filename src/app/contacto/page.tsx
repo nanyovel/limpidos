@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   // Alineada con los servicios REALES activos (Oficinas y Hogar), no con
   // sectores que aún no tienen página ni contenido visible en el sitio.
   description:
-    "Solicite su cotización gratuita de limpieza de oficinas o limpieza de hogar en República Dominicana. Respuesta garantizada en menos de 24 horas.",
+    "Solicite su cotización gratuita de limpieza de oficinas o limpieza de hogar en República Dominicana. Respuesta garantizada en menos de 2 horas.",
   alternates: { canonical: `${SITE_URL}/contacto` },
 };
 
@@ -72,8 +72,8 @@ const PROCESS_STEPS = [
   },
   {
     step: "2",
-    title: "Lo contactamos en 24h",
-    desc: "Un asesor dedicado se comunica para entender sus necesidades.",
+    title: "Lo contactamos en 2h",
+    desc: "Un asesor dedicado se comunica de inmediato para entender sus necesidades.",
   },
   {
     step: "3",
@@ -145,7 +145,7 @@ export default function ContactoPage() {
               </h1>
               <p className="text-xl text-brand-200 mb-8 leading-relaxed">
                 Complete el formulario y un asesor especializado en limpieza
-                empresarial se pondrá en contacto en menos de 24 horas con una
+                empresarial se pondrá en contacto en menos de 2 horas con una
                 propuesta a medida.
               </p>
 
